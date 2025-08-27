@@ -5,6 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LABIC - Liga Acadêmica de Biologia | Início</title>
     
+    <meta name="description" content="Página inicial da Liga Acadêmica de Biologia (LABIC). Conheça nossos projetos de pesquisa focados nos impactos ambientais do Porto de Suape em ecossistemas costeiros.">
+    <meta name="keywords" content="LABIC, Liga Acadêmica de Biologia, Colégio Imaculada da Conceição, pesquisa, biologia, Porto de Suape, meio ambiente, ecossistemas costeiros, Recife, Pernambuco">
+    <meta name="author" content="LABIC - Colégio Imaculada da Conceição">
+
+    <meta property="og:title" content="LABIC - Liga Acadêmica de Biologia">
+    <meta property="og:description" content="Explorando os desafios da natureza e do desenvolvimento industrial em Suape. Conheça nossos projetos de pesquisa e contribua para a ciência.">
+    <meta property="og:image" content="https://seusite.com/assets/images/logo_labic_social.png">
+    <meta property="og:url" content="https://seusite.com/index.html">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    
     <link rel="stylesheet" href="css/style.css">
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -23,29 +35,29 @@
 <body>
 
     <header>
-        <nav>
+        <nav aria-label="Navegação Principal">
             <div class="logo">
-                <a href="index.html">
+                <a href="index.html" aria-label="Página inicial da LABIC">
                     <img src="assets/images/logo_labic.png" alt="Logo da LABIC - Liga Acadêmica de Biologia">
                 </a>
             </div>
             
-            <div class="menu-toggle" id="mobile-menu">
+            <div class="menu-toggle" id="mobile-menu" role="button" aria-controls="main-menu" aria-expanded="false" aria-label="Abrir menu de navegação">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
             
-            <ul class="nav-menu">
-                <li><a href="index.html" class="active-link">Início</a></li>
-                <li><a href="projeto.html">O Projeto</a></li>
-                <li><a href="referencial.html">Referencial</a></li>
-                <li><a href="resultados.html">Resultados</a></li>
-                <li><a href="publicacoes.html">Publicações</a></li>
-                <li><a href="dados.html">Dados</a></li>
-                <li><a href="glossario.html">Glossário</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="contato.html">Contato</a></li>
+            <ul class="nav-menu" id="main-menu" role="menubar">
+                <li role="menuitem"><a href="index.html" class="active-link">Início</a></li>
+                <li role="menuitem"><a href="projeto.html">O Projeto</a></li>
+                <li role="menuitem"><a href="referencial.html">Referencial</a></li>
+                <li role="menuitem"><a href="resultados.html">Resultados</a></li>
+                <li role="menuitem"><a href="publicacoes.html">Publicações</a></li>
+                <li role="menuitem"><a href="dados.html">Dados</a></li>
+                <li role="menuitem"><a href="glossario.html">Glossário</a></li>
+                <li role="menuitem"><a href="sobre.html">Sobre</a></li>
+                <li role="menuitem"><a href="contato.html">Contato</a></li>
             </ul>
         </nav>
     </header>
@@ -55,62 +67,81 @@
             <div id="model-container"></div>
             <div class="hero-content">
                 <h1>Liga Acadêmica de Biologia</h1>
-                <p class="subtitle">LABIC: Explorando os desafios da natureza e do desenvolvimento industrial em Suape.</p>
+                <p class="subtitle">LABIC: **Explorando os desafios da natureza e do desenvolvimento industrial em Suape.**</p>
                 <a href="projeto.html" class="cta-button">Conheça Nossos Projetos</a>
             </div>
         </section>
 
         <section class="intro-section content-section">
             <div class="container">
-                <h2>Bem-vindos à LABIC</h2>
-                <p>A Liga Acadêmica de Biologia do Colégio Imaculada da Conceição é um projeto inovador que visa aprofundar o conhecimento de nossos alunos em pesquisas científicas relevantes. Sob a orientação do Professor Vanbasten Rocha, a LABIC se dedica a investigar questões ambientais complexas, promovendo o pensamento crítico e a formação de jovens pesquisadores.</p>
-            </div>
-        </section>
-
-        <section class="groups-section content-section">
-            <div class="container">
-                <h2>Nossos Projetos de Pesquisa</h2>
-                <div class="highlight-cards">
-                    <div class="card">
-                        <img src="assets/images/icon_1.svg" alt="Ícone do Grupo">
-                        <h3>3º Ano A</h3>
-                        <p>**Bioindicadores da Qualidade da Água em Áreas de Influência do Porto de Suape**: Avaliação da Saúde de Ecossistemas Costeiros.</p>
-                        <a href="projeto.html#bioindicadores" class="card-link">Saber Mais →</a>
+                <h2 class="section-title">Bem-vindos à LABIC</h2>
+                <div class="intro-grid">
+                    <div class="intro-text">
+                        <p>A **Liga Acadêmica de Biologia do Colégio Imaculada da Conceição (LABIC)** é um projeto inovador que visa aprofundar o conhecimento de nossos alunos em pesquisas científicas relevantes. Sob a orientação do **Professor Vanbasten Rocha**, a LABIC se dedica a investigar questões ambientais complexas, promovendo o pensamento crítico e a formação de jovens pesquisadores.</p>
+                        <p>Nossa missão é mais do que apenas estudar: é entender e propor soluções para os impactos do desenvolvimento industrial em ecossistemas vulneráveis. Com foco na região de **Suape**, nossos projetos buscam contribuir para a ciência local e global.</p>
+                        <a href="sobre.html" class="link-more">Saiba mais sobre a nossa história →</a>
                     </div>
-                    <div class="card">
-                        <img src="assets/images/icon_2.svg" alt="Ícone do Grupo">
-                        <h3>2º Ano A</h3>
-                        <p>**Rotas Alteradas?**: Investigando a conexão entre o porto de Suape e a ocorrência de tubarões na região metropolitana do Recife.</p>
-                        <a href="projeto.html#rotas" class="card-link">Saber Mais →</a>
-                    </div>
-                    <div class="card">
-                        <img src="assets/images/icon_3.svg" alt="Ícone do Grupo">
-                        <h3>2º Ano B</h3>
-                        <p>**Análise dos Impactos do saneamento básico na saúde na ilha de Tatuoquinha**, Porto de Suape.</p>
-                        <a href="projeto.html#saneamento" class="card-link">Saber Mais →</a>
-                    </div>
-                    <div class="card">
-                        <img src="assets/images/icon_4.svg" alt="Ícone do Grupo">
-                        <h3>1º Ano A</h3>
-                        <p>**Biofiltração inteligente**: Avaliação da eficiência de diferentes espécies de macroalgas na remediação de Efluentes encontradas em áreas portuárias de Suape.</p>
-                        <a href="projeto.html#biofiltracao" class="card-link">Saber Mais →</a>
+                    <div class="intro-image-container">
+                        <img src="assets/images/labic_team_photo.jpg" alt="Foto dos membros da LABIC em um laboratório" class="intro-image">
                     </div>
                 </div>
             </div>
         </section>
 
-        <section class="call-to-action-section content-section">
+        <section class="groups-section content-section">
             <div class="container">
-                <h2>Participe e Conecte-se</h2>
-                <p>Junte-se à nossa missão de explorar a ciência e contribuir para um futuro mais sustentável. Conheça nossos trabalhos, publicações e entre em contato para fazer parte da LABIC.</p>
+                <h2 class="section-title">Nossos Projetos de Pesquisa</h2>
+                <p class="section-description">A LABIC está dividida em grupos, cada um dedicado a uma linha de pesquisa única, mas interligada pelos desafios ambientais da região de Suape. Clique para saber mais sobre cada projeto.</p>
+                <div class="highlight-cards">
+                    <div class="card">
+                        <img src="assets/images/icon_1.svg" alt="Ícone de bioindicador aquático">
+                        <h3>3º Ano: Bioindicadores Aquáticos</h3>
+                        <p>**Bioindicadores da Qualidade da Água em Áreas de Influência do Porto de Suape**: Avaliação da Saúde de Ecossistemas Costeiros.</p>
+                        <a href="projeto.html#bioindicadores" class="card-link" aria-label="Saber mais sobre o projeto de bioindicadores">Saber Mais →</a>
+                    </div>
+                    <div class="card">
+                        <img src="assets/images/icon_2.svg" alt="Ícone de tubarão">
+                        <h3>2º Ano A: Relação Porto-Tubarões</h3>
+                        <p>**Rotas Alteradas?**: Investigando a conexão entre o porto de Suape e a ocorrência de tubarões na região metropolitana do Recife.</p>
+                        <a href="projeto.html#rotas" class="card-link" aria-label="Saber mais sobre o projeto de rotas de tubarões">Saber Mais →</a>
+                    </div>
+                    <div class="card">
+                        <img src="assets/images/icon_3.svg" alt="Ícone de saúde e saneamento básico">
+                        <h3>2º Ano B: Saneamento e Saúde</h3>
+                        <p>**Análise dos Impactos do saneamento básico na saúde na ilha de Tatuoquinha**, Porto de Suape.</p>
+                        <a href="projeto.html#saneamento" class="card-link" aria-label="Saber mais sobre o projeto de saneamento na Ilha de Tatuoquinha">Saber Mais →</a>
+                    </div>
+                    <div class="card">
+                        <img src="assets/images/icon_4.svg" alt="Ícone de alga e biofiltração">
+                        <h3>1º Ano: Biofiltração de Efluentes</h3>
+                        <p>**Biofiltração inteligente**: Avaliação da eficiência de diferentes espécies de macroalgas na remediação de Efluentes encontradas em áreas portuárias de Suape.</p>
+                        <a href="projeto.html#biofiltracao" class="card-link" aria-label="Saber mais sobre o projeto de biofiltração com macroalgas">Saber Mais →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="call-to-action-section content-section full-width-background">
+            <div class="container">
+                <h2>Junte-se à Nossa Missão</h2>
+                <p>Nossa jornada é sobre mais do que pesquisa: é sobre inspirar a próxima geração de cientistas e cidadãos conscientes. Conheça nossos trabalhos, publicações e descubra como você pode fazer parte desta iniciativa.</p>
                 <a href="contato.html" class="cta-button secondary-cta">Entre em Contato</a>
+                <a href="publicacoes.html" class="cta-button tertiary-cta">Veja Nossas Publicações</a>
             </div>
         </section>
     </main>
 
-    <footer>
-        <p>&copy; 2025 - LABIC | Liga Acadêmica de Biologia.</p>
-        <p>Orientação: Professor Vanbasten Rocha</p>
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <p>&copy; 2025 - LABIC | Liga Acadêmica de Biologia.</p>
+                <p>Orientação: Professor Vanbasten Rocha</p>
+                <p>Desenvolvido por [Seu Nome ou Nome do Desenvolvedor]</p>
+            </div>
+            <div class="footer-social-links">
+                <a href="https://instagram.com/labic_oficial" target="_blank" aria-label="Instagram da LABIC"><img src="assets/images/icon_instagram.svg" alt="Instagram"></a>
+                </div>
+        </div>
     </footer>
 
     <script src="js/main.js" defer></script>
