@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LABIC - Liga Acadêmica de Biologia | Início</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.158.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.158.0/examples/jsm/"
+            }
+        }
+    </script>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/images/logo_labic.png" alt="Logo da LABIC - Liga Acadêmica de Biologia">
+                </a>
+            </div>
+            
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html" class="active-link">Início</a></li>
+                <li><a href="projeto.html">O Projeto</a></li>
+                <li><a href="referencial.html">Referencial</a></li>
+                <li><a href="resultados.html">Resultados</a></li>
+                <li><a href="publicacoes.html">Publicações</a></li>
+                <li><a href="dados.html">Dados</a></li>
+                <li><a href="glossario.html">Glossário</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="home-page">
+        <section class="hero-section">
+            <div id="model-container"></div>
+            <div class="hero-content">
+                <h1>Liga Acadêmica de Biologia</h1>
+                <p class="subtitle">LABIC: Explorando os desafios da natureza e do desenvolvimento industrial em Suape.</p>
+                <a href="projeto.html" class="cta-button">Conheça Nossos Projetos</a>
+            </div>
+        </section>
+
+        <section class="intro-section content-section">
+            <div class="container">
+                <h2>Bem-vindos à LABIC</h2>
+                <p>A Liga Acadêmica de Biologia do Colégio Imaculada da Conceição é um projeto inovador que visa aprofundar o conhecimento de nossos alunos em pesquisas científicas relevantes. Sob a orientação do Professor Vanbasten Rocha, a LABIC se dedica a investigar questões ambientais complexas, promovendo o pensamento crítico e a formação de jovens pesquisadores.</p>
+            </div>
+        </section>
+
+        <section class="groups-section content-section">
+            <div class="container">
+                <h2>Nossos Projetos de Pesquisa</h2>
+                <div class="highlight-cards">
+                    <div class="card">
+                        <img src="assets/images/icon_1.svg" alt="Ícone do Grupo">
+                        <h3>3º Ano A</h3>
+                        <p>**Bioindicadores da Qualidade da Água em Áreas de Influência do Porto de Suape**: Avaliação da Saúde de Ecossistemas Costeiros.</p>
+                        <a href="projeto.html#bioindicadores" class="card-link">Saber Mais →</a>
+                    </div>
+                    <div class="card">
+                        <img src="assets/images/icon_2.svg" alt="Ícone do Grupo">
+                        <h3>2º Ano A</h3>
+                        <p>**Rotas Alteradas?**: Investigando a conexão entre o porto de Suape e a ocorrência de tubarões na região metropolitana do Recife.</p>
+                        <a href="projeto.html#rotas" class="card-link">Saber Mais →</a>
+                    </div>
+                    <div class="card">
+                        <img src="assets/images/icon_3.svg" alt="Ícone do Grupo">
+                        <h3>2º Ano B</h3>
+                        <p>**Análise dos Impactos do saneamento básico na saúde na ilha de Tatuoquinha**, Porto de Suape.</p>
+                        <a href="projeto.html#saneamento" class="card-link">Saber Mais →</a>
+                    </div>
+                    <div class="card">
+                        <img src="assets/images/icon_4.svg" alt="Ícone do Grupo">
+                        <h3>1º Ano A</h3>
+                        <p>**Biofiltração inteligente**: Avaliação da eficiência de diferentes espécies de macroalgas na remediação de Efluentes encontradas em áreas portuárias de Suape.</p>
+                        <a href="projeto.html#biofiltracao" class="card-link">Saber Mais →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="call-to-action-section content-section">
+            <div class="container">
+                <h2>Participe e Conecte-se</h2>
+                <p>Junte-se à nossa missão de explorar a ciência e contribuir para um futuro mais sustentável. Conheça nossos trabalhos, publicações e entre em contato para fazer parte da LABIC.</p>
+                <a href="contato.html" class="cta-button secondary-cta">Entre em Contato</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - LABIC | Liga Acadêmica de Biologia.</p>
+        <p>Orientação: Professor Vanbasten Rocha</p>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+    <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+    <script type="module" src="js/model.js" defer></script>
+</body>
+</html>
