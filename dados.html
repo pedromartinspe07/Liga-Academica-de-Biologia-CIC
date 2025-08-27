@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados - LABIC</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/images/logo_labic.png" alt="Logo da LABIC - Liga Acadêmica de Biologia">
+                </a>
+            </div>
+            
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="projeto.html">O Projeto</a></li>
+                <li><a href="referencial.html">Referencial</a></li>
+                <li><a href="resultados.html">Resultados</a></li>
+                <li><a href="publicacoes.html">Publicações</a></li>
+                <li><a href="dados.html" class="active-link">Dados</a></li>
+                <li><a href="glossario.html">Glossário</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <div class="container">
+            <h1>Dados da Pesquisa</h1>
+
+            <section class="content-section">
+                <h2>Transparência e Acesso</h2>
+                <p>Em nome da transparência e da replicabilidade de nossos estudos, disponibilizamos aqui as bases de dados utilizadas em nossos projetos. Os arquivos estão em formatos acessíveis e prontos para download.</p>
+            </section>
+
+            <section class="content-section data-table">
+                <h2>Bases de Dados Disponíveis</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Arquivo</th>
+                            <th>Descrição</th>
+                            <th>Formato</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>`Dados_Bioindicadores.csv`</td>
+                            <td>Níveis de poluentes e contagem de espécies bioindicadoras</td>
+                            <td>CSV</td>
+                            <td><a href="#" class="data-link" download>Download</a></td>
+                        </tr>
+                        <tr>
+                            <td>`Trafego_Portuario.xlsx`</td>
+                            <td>Histórico de volume de navios em Suape (2010-2023)</td>
+                            <td>XLSX</td>
+                            <td><a href="#" class="data-link" download>Download</a></td>
+                        </tr>
+                        <tr>
+                            <td>`Pesquisa_Saneamento.pdf`</td>
+                            <td>Questionário e dados de saúde da Ilha de Tatuoquinha</td>
+                            <td>PDF</td>
+                            <td><a href="#" class="data-link" download>Download</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - LABIC | Liga Acadêmica de Biologia.</p>
+        <p>Orientação: Professor Vanbasten Rocha</p>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+</body>
+</html>
