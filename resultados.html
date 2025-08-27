@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados - LABIC</title>
+    
+    <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="assets/images/logo_labic.png" alt="Logo da LABIC - Liga Acadêmica de Biologia">
+                </a>
+            </div>
+            
+            <div class="menu-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+            
+            <ul class="nav-menu">
+                <li><a href="index.html">Início</a></li>
+                <li><a href="projeto.html">O Projeto</a></li>
+                <li><a href="referencial.html">Referencial</a></li>
+                <li><a href="resultados.html" class="active-link">Resultados</a></li>
+                <li><a href="publicacoes.html">Publicações</a></li>
+                <li><a href="dados.html">Dados</a></li>
+                <li><a href="glossario.html">Glossário</a></li>
+                <li><a href="sobre.html">Sobre</a></li>
+                <li><a href="contato.html">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <div class="container">
+            <h1>Resultados da Pesquisa</h1>
+
+            <section class="content-section">
+                <h2>Análise Gráfica</h2>
+                <p>Nesta seção, apresentamos as principais descobertas dos projetos da LABIC através de gráficos e visualizações de dados. Cada gráfico é acompanhado por uma breve análise que explica as conclusões tiradas a partir dos resultados.</p>
+            </section>
+            
+            <section class="content-section chart-container">
+                <h2>Grupo 3º Ano A: Bioindicadores</h2>
+                <canvas id="bioindicadoresChart"></canvas>
+                <div class="chart-caption">
+                    <strong>Análise:</strong> Este gráfico compara os níveis de um poluente específico (Ex: Nível de nitrato na água) em diferentes pontos de coleta em Suape. Os resultados mostram um aumento significativo em áreas de maior influência industrial, indicando o impacto nas espécies bioindicadoras.
+                </div>
+            </section>
+
+            <section class="content-section chart-container">
+                <h2>Grupo 2º Ano A: Tubarões e Rotas</h2>
+                <canvas id="sharksChart"></canvas>
+                <div class="chart-caption">
+                    <strong>Análise:</strong> Este gráfico ilustra o número de avistamentos de tubarões na costa do Recife ao longo dos anos, correlacionando-o com o volume de tráfego portuário em Suape. A tendência de crescimento sugere uma possível relação, que será aprofundada em nossas próximas publicações.
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 - LABIC | Liga Acadêmica de Biologia.</p>
+        <p>Orientação: Professor Vanbasten Rocha</p>
+    </footer>
+
+    <script src="js/main.js" defer></script>
+    <script src="js/chart.js" defer></script>
+</body>
+</html>
