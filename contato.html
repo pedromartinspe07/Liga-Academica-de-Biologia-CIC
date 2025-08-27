@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato - LABIC</title>
+    <title>Contato - LABIC | Liga Acadêmica de Biologia</title>
+    
+    <meta name="description" content="Entre em contato com a LABIC - Liga Acadêmica de Biologia. Envie sua mensagem, conecte-se com o professor orientador ou siga-nos nas redes sociais para saber mais sobre nossos projetos.">
+    <meta name="keywords" content="contato, LABIC, Colégio Imaculada da Conceição, professor Vanbasten Rocha, e-mail, redes sociais, formulário de contato, Porto de Suape">
+    <meta name="author" content="LABIC - Colégio Imaculada da Conceição">
+
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
     
     <link rel="stylesheet" href="css/style.css">
     
@@ -14,70 +20,98 @@
 <body>
 
     <header>
-        <nav>
+        <nav aria-label="Navegação Principal">
             <div class="logo">
-                <a href="index.html">
+                <a href="index.html" aria-label="Página inicial da LABIC">
                     <img src="assets/images/logo_labic.png" alt="Logo da LABIC - Liga Acadêmica de Biologia">
                 </a>
             </div>
             
-            <div class="menu-toggle" id="mobile-menu">
+            <div class="menu-toggle" id="mobile-menu" role="button" aria-controls="main-menu" aria-expanded="false" aria-label="Abrir menu de navegação">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
             
-            <ul class="nav-menu">
-                <li><a href="index.html">Início</a></li>
-                <li><a href="projeto.html">O Projeto</a></li>
-                <li><a href="referencial.html">Referencial</a></li>
-                <li><a href="resultados.html">Resultados</a></li>
-                <li><a href="publicacoes.html">Publicações</a></li>
-                <li><a href="dados.html">Dados</a></li>
-                <li><a href="glossario.html">Glossário</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="contato.html" class="active-link">Contato</a></li>
+            <ul class="nav-menu" id="main-menu" role="menubar">
+                <li role="menuitem"><a href="index.html">Início</a></li>
+                <li role="menuitem"><a href="projeto.html">O Projeto</a></li>
+                <li role="menuitem"><a href="referencial.html">Referencial</a></li>
+                <li role="menuitem"><a href="resultados.html">Resultados</a></li>
+                <li role="menuitem"><a href="publicacoes.html">Publicações</a></li>
+                <li role="menuitem"><a href="dados.html">Dados</a></li>
+                <li role="menuitem"><a href="glossario.html">Glossário</a></li>
+                <li role="menuitem"><a href="sobre.html">Sobre</a></li>
+                <li role="menuitem"><a href="contato.html" class="active-link">Contato</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="page-content">
         <div class="container">
-            <h1>Entre em Contato</h1>
+            <h1 class="page-title">Entre em Contato</h1>
 
-            <section class="content-section">
-                <p>Se você tem interesse em nossos projetos, deseja colaborar ou quer fazer parte da Liga Acadêmica de Biologia, preencha o formulário abaixo. Sua mensagem é muito importante para nós!</p>
+            <section class="content-section contact-info">
+                <p>Nossa equipe está à disposição para responder a dúvidas, discutir parcerias e receber sugestões. Sua contribuição é fundamental para o sucesso de nossos projetos. Escolha a melhor forma de se conectar conosco!</p>
+                <div class="contact-methods">
+                    <div class="contact-card">
+                        <img src="assets/images/icon_email.svg" alt="Ícone de E-mail">
+                        <h3>E-mail</h3>
+                        <p>Para assuntos gerais, parcerias e colaborações.</p>
+                        <a href="mailto:labic@colegiocic.com.br" class="contact-link">labic@colegiocic.com.br</a>
+                    </div>
+                    <div class="contact-card">
+                        <img src="assets/images/icon_social.svg" alt="Ícone de Redes Sociais">
+                        <h3>Redes Sociais</h3>
+                        <p>Siga-nos para acompanhar o dia a dia de nossos projetos.</p>
+                        <a href="https://instagram.com/labic_oficial" target="_blank" class="contact-link">Instagram</a>
+                    </div>
+                    <div class="contact-card">
+                        <img src="assets/images/icon_teacher.svg" alt="Ícone de Professor">
+                        <h3>Orientação</h3>
+                        <p>Contato direto com o Professor Vanbasten Rocha.</p>
+                        <a href="mailto:vanbasten.rocha@colegiocic.com.br" class="contact-link">vanbasten.rocha@colegiocic.com.br</a>
+                    </div>
+                </div>
             </section>
             
             <section class="content-section contact-form-section">
-                <h2>Envie sua Mensagem</h2>
-                <form id="contact-form">
+                <h2 class="section-title">Envie sua Mensagem</h2>
+                <p class="section-description">Preencha o formulário abaixo e nossa equipe responderá o mais breve possível.</p>
+                <form id="contact-form" method="POST" action="/submit-form">
                     <div class="form-group">
                         <label for="name">Nome Completo</label>
-                        <input type="text" id="name" name="name" required>
+                        <input type="text" id="name" name="name" required placeholder="Seu nome completo">
                     </div>
                     <div class="form-group">
                         <label for="email">E-mail</label>
-                        <input type="email" id="email" name="email" required>
+                        <input type="email" id="email" name="email" required placeholder="seu.email@exemplo.com">
                     </div>
                     <div class="form-group">
                         <label for="subject">Assunto</label>
-                        <input type="text" id="subject" name="subject" required>
+                        <input type="text" id="subject" name="subject" required placeholder="Assunto da mensagem">
                     </div>
                     <div class="form-group">
                         <label for="message">Mensagem</label>
-                        <textarea id="message" name="message" rows="6" required></textarea>
+                        <textarea id="message" name="message" rows="6" required placeholder="Escreva sua mensagem aqui..."></textarea>
                     </div>
                     <button type="submit" class="cta-button">Enviar Mensagem</button>
-                    <div id="form-status" class="form-status"></div>
+                    <div id="form-status" class="form-status" role="status" aria-live="polite"></div>
                 </form>
             </section>
         </div>
     </main>
 
-    <footer>
-        <p>&copy; 2025 - LABIC | Liga Acadêmica de Biologia.</p>
-        <p>Orientação: Professor Vanbasten Rocha</p>
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <p>&copy; 2025 - LABIC | Liga Acadêmica de Biologia.</p>
+                <p>Orientação: Professor Vanbasten Rocha</p>
+            </div>
+            <div class="footer-social-links">
+                <a href="https://instagram.com/labic_oficial" target="_blank" aria-label="Instagram da LABIC"><img src="assets/images/icon_instagram.svg" alt="Instagram"></a>
+            </div>
+        </div>
     </footer>
 
     <script src="js/main.js" defer></script>
