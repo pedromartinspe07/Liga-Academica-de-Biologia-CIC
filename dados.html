@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dados - LABIC</title>
+    <title>Dados da Pesquisa - LABIC | Liga Acadêmica de Biologia</title>
+    
+    <meta name="description" content="Acesse e baixe os dados brutos e planilhas de pesquisa da LABIC, incluindo informações sobre bioindicadores, tráfego portuário de Suape e saneamento na Ilha de Tatuoquinha.">
+    <meta name="keywords" content="dados, pesquisa, ciência, LABIC, download, Suape, bioindicadores, saneamento, dados abertos, CSV, XLS">
+    <meta name="author" content="LABIC - Colégio Imaculada da Conceição">
+
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
     
     <link rel="stylesheet" href="css/style.css">
     
@@ -14,71 +20,85 @@
 <body>
 
     <header>
-        <nav>
+        <nav aria-label="Navegação Principal">
             <div class="logo">
-                <a href="index.html">
+                <a href="index.html" aria-label="Página inicial da LABIC">
                     <img src="assets/images/logo_labic.png" alt="Logo da LABIC - Liga Acadêmica de Biologia">
                 </a>
             </div>
             
-            <div class="menu-toggle" id="mobile-menu">
+            <div class="menu-toggle" id="mobile-menu" role="button" aria-controls="main-menu" aria-expanded="false" aria-label="Abrir menu de navegação">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
             
-            <ul class="nav-menu">
-                <li><a href="index.html">Início</a></li>
-                <li><a href="projeto.html">O Projeto</a></li>
-                <li><a href="referencial.html">Referencial</a></li>
-                <li><a href="resultados.html">Resultados</a></li>
-                <li><a href="publicacoes.html">Publicações</a></li>
-                <li><a href="dados.html" class="active-link">Dados</a></li>
-                <li><a href="glossario.html">Glossário</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="contato.html">Contato</a></li>
+            <ul class="nav-menu" id="main-menu" role="menubar">
+                <li role="menuitem"><a href="index.html">Início</a></li>
+                <li role="menuitem"><a href="projeto.html">O Projeto</a></li>
+                <li role="menuitem"><a href="referencial.html">Referencial</a></li>
+                <li role="menuitem"><a href="resultados.html">Resultados</a></li>
+                <li role="menuitem"><a href="publicacoes.html">Publicações</a></li>
+                <li role="menuitem"><a href="dados.html" class="active-link">Dados</a></li>
+                <li role="menuitem"><a href="glossario.html">Glossário</a></li>
+                <li role="menuitem"><a href="sobre.html">Sobre</a></li>
+                <li role="menuitem"><a href="contato.html">Contato</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="page-content">
         <div class="container">
-            <h1>Dados da Pesquisa</h1>
+            <h1 class="page-title">Dados Abertos da Pesquisa</h1>
 
             <section class="content-section">
-                <h2>Transparência e Acesso</h2>
-                <p>Em nome da transparência e da replicabilidade de nossos estudos, disponibilizamos aqui as bases de dados utilizadas em nossos projetos. Os arquivos estão em formatos acessíveis e prontos para download.</p>
+                <p class="section-description">Em busca da transparência e da colaboração científica, disponibilizamos aqui as bases de dados e materiais brutos utilizados em nossos projetos. Os arquivos estão em formatos acessíveis e prontos para download. Encorajamos o uso desses dados para fins de pesquisa, ensino e análise, com a devida citação da fonte.</p>
+                <div class="info-box">
+                    <p><strong>Atenção:</strong> Os dados são fornecidos "como estão". Para entender a metodologia de coleta e a análise dos resultados, por favor, consulte a seção <a href="resultados.html">Resultados</a> e <a href="publicacoes.html">Publicações</a>.</p>
+                </div>
             </section>
 
-            <section class="content-section data-table">
-                <h2>Bases de Dados Disponíveis</h2>
-                <table>
+            <section class="content-section data-table-section">
+                <h2 class="section-title">Bases de Dados Disponíveis para Download</h2>
+                <table class="data-table">
+                    <caption class="sr-only">Tabela com os arquivos de dados disponíveis para download.</caption>
                     <thead>
                         <tr>
-                            <th>Arquivo</th>
+                            <th>Nome do Arquivo</th>
                             <th>Descrição</th>
                             <th>Formato</th>
+                            <th>Tamanho</th>
                             <th>Ações</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr>
-                            <td>`Dados_Bioindicadores.csv`</td>
-                            <td>Níveis de poluentes e contagem de espécies bioindicadoras</td>
+                            <td><code>Dados_Bioindicadores.csv</code></td>
+                            <td>Dados brutos sobre a contagem de organismos bioindicadores e variáveis físico-químicas da água em pontos de amostragem no Porto de Suape.</td>
                             <td>CSV</td>
-                            <td><a href="#" class="data-link" download>Download</a></td>
+                            <td>250 KB</td>
+                            <td><a href="assets/data/Dados_Bioindicadores.csv" class="button-link" download>Download</a></td>
                         </tr>
                         <tr>
-                            <td>`Trafego_Portuario.xlsx`</td>
-                            <td>Histórico de volume de navios em Suape (2010-2023)</td>
+                            <td><code>Trafego_Portuario.xlsx</code></td>
+                            <td>Série histórica do volume de navios e tipos de carga movimentados no Porto de Suape, de 2010 a 2023.</td>
                             <td>XLSX</td>
-                            <td><a href="#" class="data-link" download>Download</a></td>
+                            <td>85 KB</td>
+                            <td><a href="assets/data/Trafego_Portuario.xlsx" class="button-link" download>Download</a></td>
                         </tr>
                         <tr>
-                            <td>`Pesquisa_Saneamento.pdf`</td>
-                            <td>Questionário e dados de saúde da Ilha de Tatuoquinha</td>
+                            <td><code>Pesquisa_Saneamento.pdf</code></td>
+                            <td>Relatório detalhado sobre o questionário de saneamento básico e saúde aplicado aos moradores da Ilha de Tatuoquinha.</td>
                             <td>PDF</td>
-                            <td><a href="#" class="data-link" download>Download</a></td>
+                            <td>1.2 MB</td>
+                            <td><a href="assets/data/Pesquisa_Saneamento.pdf" class="button-link" download>Download</a></td>
+                        </tr>
+                        <tr>
+                            <td><code>Macroalgas_Biofiltracao.csv</code></td>
+                            <td>Resultados experimentais da eficiência de biofiltração de três espécies de macroalgas em diferentes concentrações de efluentes.</td>
+                            <td>CSV</td>
+                            <td>50 KB</td>
+                            <td><a href="assets/data/Macroalgas_Biofiltracao.csv" class="button-link" download>Download</a></td>
                         </tr>
                     </tbody>
                 </table>
@@ -86,9 +106,16 @@
         </div>
     </main>
 
-    <footer>
-        <p>&copy; 2025 - LABIC | Liga Acadêmica de Biologia.</p>
-        <p>Orientação: Professor Vanbasten Rocha</p>
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <p>&copy; 2025 - LABIC | Liga Acadêmica de Biologia.</p>
+                <p>Orientação: Professor Vanbasten Rocha</p>
+            </div>
+            <div class="footer-social-links">
+                <a href="https://instagram.com/labic_oficial" target="_blank" aria-label="Instagram da LABIC"><img src="assets/images/icon_instagram.svg" alt="Instagram"></a>
+            </div>
+        </div>
     </footer>
 
     <script src="js/main.js" defer></script>
