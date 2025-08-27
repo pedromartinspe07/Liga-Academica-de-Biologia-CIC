@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sobre Nós - LABIC</title>
+    <title>Sobre a LABIC - Equipe e Missão | Liga Acadêmica de Biologia</title>
+    
+    <meta name="description" content="Conheça a história e a missão da LABIC, a Liga Acadêmica de Biologia do Colégio Imaculada da Conceição. Saiba mais sobre o professor orientador, a equipe de pesquisa e nossos valores.">
+    <meta name="keywords" content="sobre nós, LABIC, missão, visão, biologia, professor Vanbasten Rocha, equipe, alunos, Colégio Imaculada da Conceição">
+    <meta name="author" content="LABIC - Colégio Imaculada da Conceição">
+
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
     
     <link rel="stylesheet" href="css/style.css">
     
@@ -14,85 +20,138 @@
 <body>
 
     <header>
-        <nav>
+        <nav aria-label="Navegação Principal">
             <div class="logo">
-                <a href="index.html">
+                <a href="index.html" aria-label="Página inicial da LABIC">
                     <img src="assets/images/logo_labic.png" alt="Logo da LABIC - Liga Acadêmica de Biologia">
                 </a>
             </div>
             
-            <div class="menu-toggle" id="mobile-menu">
+            <div class="menu-toggle" id="mobile-menu" role="button" aria-controls="main-menu" aria-expanded="false" aria-label="Abrir menu de navegação">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
             
-            <ul class="nav-menu">
-                <li><a href="index.html">Início</a></li>
-                <li><a href="projeto.html">O Projeto</a></li>
-                <li><a href="referencial.html">Referencial</a></li>
-                <li><a href="resultados.html">Resultados</a></li>
-                <li><a href="publicacoes.html">Publicações</a></li>
-                <li><a href="dados.html">Dados</a></li>
-                <li><a href="glossario.html">Glossário</a></li>
-                <li><a href="sobre.html" class="active-link">Sobre</a></li>
-                <li><a href="contato.html">Contato</a></li>
+            <ul class="nav-menu" id="main-menu" role="menubar">
+                <li role="menuitem"><a href="index.html">Início</a></li>
+                <li role="menuitem"><a href="projeto.html">O Projeto</a></li>
+                <li role="menuitem"><a href="referencial.html">Referencial</a></li>
+                <li role="menuitem"><a href="resultados.html">Resultados</a></li>
+                <li role="menuitem"><a href="publicacoes.html">Publicações</a></li>
+                <li role="menuitem"><a href="dados.html">Dados</a></li>
+                <li role="menuitem"><a href="glossario.html">Glossário</a></li>
+                <li role="menuitem"><a href="sobre.html" class="active-link">Sobre</a></li>
+                <li role="menuitem"><a href="contato.html">Contato</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="page-content">
         <div class="container">
-            <h1>Sobre a LABIC</h1>
+            <h1 class="page-title">Sobre a LABIC</h1>
+            <p class="subtitle">Acreditamos que a ciência transforma o mundo. E nós transformamos a ciência.</p>
 
             <section class="content-section">
-                <h2>Missão e Visão</h2>
-                <p>A LABIC foi criada para ser um ambiente de imersão no universo da pesquisa científica. Nossa missão é despertar o interesse dos estudantes pela biologia, incentivando-os a investigar problemas reais e a desenvolver soluções criativas. Nossa visão é formar a próxima geração de cientistas e pensadores críticos, capazes de impactar positivamente a sociedade e o meio ambiente.</p>
+                <h2 class="section-title">Nossa História e Propósito</h2>
+                <p>A **Liga Acadêmica de Biologia (LABIC)** é um projeto de pesquisa fundado com a missão de ir além do ensino tradicional. Criada para ser um ambiente de imersão no universo da ciência, a LABIC oferece aos estudantes a oportunidade de se engajarem em **pesquisas práticas** que abordam problemas ambientais e sociais reais em nossa comunidade, com foco na área de influência do Porto de Suape.</p>
+                <p>Nossa visão é **formar a próxima geração de cientistas e pensadores críticos**, capazes de aplicar o conhecimento para criar soluções inovadoras. Valorizamos a colaboração, o pensamento crítico e a responsabilidade social em cada etapa de nossos projetos.</p>
             </section>
             
-            <section class="content-section">
-                <h2>O Orientador</h2>
+            <section class="content-section mentor-section">
+                <h2 class="section-title">O Orientador</h2>
                 <div class="mentor-card">
                     <img src="assets/images/vanbasten.png" alt="Foto do Professor Vanbasten Rocha" class="profile-photo">
                     <div class="mentor-details">
                         <h3>Professor Vanbasten Rocha</h3>
                         <p class="role">Orientador e Coordenador da LABIC</p>
-                        <p>Professor Vanbasten Rocha é o mentor e a força motriz por trás da Liga Acadêmica. Com sua vasta experiência em Biologia e sua paixão pelo ensino, ele guia os alunos em cada etapa do processo de pesquisa, desde a formulação das hipóteses até a análise dos resultados.</p>
+                        <p>O Professor Vanbasten Rocha é a força motriz por trás da Liga Acadêmica. Com sua vasta experiência em Biologia, ecologia e gestão ambiental, ele guia os alunos em cada etapa do processo de pesquisa, desde a formulação das hipóteses e o trabalho de campo até a análise dos resultados e a elaboração de publicações científicas. Sua paixão pelo ensino e sua dedicação inspiram a todos os membros da LABIC.</p>
                     </div>
                 </div>
             </section>
             
-            <section class="content-section">
-                <h2>A Equipe de Pesquisa</h2>
+            <section class="content-section team-section">
+                <h2 class="section-title">Nossos Jovens Pesquisadores</h2>
+                <p>Nossa equipe é formada por estudantes engajados, divididos em grupos, cada um dedicado a um projeto específico. Conheça a equipe que está fazendo a diferença:</p>
                 <div class="team-grid">
-                    <div class="card profile-card">
-                        <img src="assets/images/profile_3a_1.png" alt="Foto de Membro" class="profile-photo">
-                        <h3>Grupo 3º Ano A</h3>
-                        <p>Arthur Lemos, Marília Laura, Lyvia Beatriz, Taísa Paiva, Maria Letícia, Maria Eduarda, Pedro Martins</p>
+                    <div class="profile-card">
+                        <img src="assets/images/profile_3a_1.png" alt="Foto de um membro do Grupo 3º Ano A" class="profile-photo">
+                        <div class="profile-details">
+                            <h3>Grupo 3º Ano A</h3>
+                            <p class="project-title-small">Bioindicadores da Água</p>
+                            <ul class="member-list">
+                                <li>Arthur Lemos</li>
+                                <li>Marília Laura</li>
+                                <li>Lyvia Beatriz</li>
+                                <li>Taísa Paiva</li>
+                                <li>Maria Letícia</li>
+                                <li>Maria Eduarda</li>
+                                <li>Pedro Martins</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="card profile-card">
-                        <img src="assets/images/profile_2a_1.png" alt="Foto de Membro" class="profile-photo">
-                        <h3>Grupo 2º Ano A</h3>
-                        <p>Maria Eduarda Gaspar, Mayra, Maria Clara, Ana Beatriz do Canto, Yasmin Melo, Julia Beatriz, Julie Azevedo</p>
+                    <div class="profile-card">
+                        <img src="assets/images/profile_2a_1.png" alt="Foto de um membro do Grupo 2º Ano A" class="profile-photo">
+                        <div class="profile-details">
+                            <h3>Grupo 2º Ano A</h3>
+                            <p class="project-title-small">Tubarões e o Porto</p>
+                            <ul class="member-list">
+                                <li>Maria Eduarda Gaspar</li>
+                                <li>Mayra</li>
+                                <li>Maria Clara</li>
+                                <li>Ana Beatriz do Canto</li>
+                                <li>Yasmin Melo</li>
+                                <li>Julia Beatriz</li>
+                                <li>Julie Azevedo</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="card profile-card">
-                        <img src="assets/images/profile_2b_1.png" alt="Foto de Membro" class="profile-photo">
-                        <h3>Grupo 2º Ano B</h3>
-                        <p>Giovana Silveira, Júlia Silveira, Eutália Duarte, Fernando José, Adélia Amorim, Pedro Miguel, Maria Vitória Galamba</p>
+                    <div class="profile-card">
+                        <img src="assets/images/profile_2b_1.png" alt="Foto de um membro do Grupo 2º Ano B" class="profile-photo">
+                        <div class="profile-details">
+                            <h3>Grupo 2º Ano B</h3>
+                            <p class="project-title-small">Saneamento em Tatuoquinha</p>
+                            <ul class="member-list">
+                                <li>Giovana Silveira</li>
+                                <li>Júlia Silveira</li>
+                                <li>Eutália Duarte</li>
+                                <li>Fernando José</li>
+                                <li>Adélia Amorim</li>
+                                <li>Pedro Miguel</li>
+                                <li>Maria Vitória Galamba</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="card profile-card">
-                        <img src="assets/images/profile_1a_1.png" alt="Foto de Membro" class="profile-photo">
-                        <h3>Grupo 1º Ano A</h3>
-                        <p>Flora Nascimento, Gabriele Machado, Gabrielly Marinho, Alícia Vitória, Heitor, Bruno</p>
+                    <div class="profile-card">
+                        <img src="assets/images/profile_1a_1.png" alt="Foto de um membro do Grupo 1º Ano A" class="profile-photo">
+                        <div class="profile-details">
+                            <h3>Grupo 1º Ano A</h3>
+                            <p class="project-title-small">Biofiltração com Macroalgas</p>
+                            <ul class="member-list">
+                                <li>Flora Nascimento</li>
+                                <li>Gabriele Machado</li>
+                                <li>Gabrielly Marinho</li>
+                                <li>Alícia Vitória</li>
+                                <li>Heitor</li>
+                                <li>Bruno</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </section>
         </div>
     </main>
 
-    <footer>
-        <p>&copy; 2025 - LABIC | Liga Acadêmica de Biologia.</p>
-        <p>Orientação: Professor Vanbasten Rocha</p>
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <p>&copy; 2025 - LABIC | Liga Acadêmica de Biologia.</p>
+                <p>Orientação: Professor Vanbasten Rocha</p>
+            </div>
+            <div class="footer-social-links">
+                <a href="https://instagram.com/labic_oficial" target="_blank" aria-label="Instagram da LABIC"><img src="assets/images/icon_instagram.svg" alt="Instagram"></a>
+            </div>
+        </div>
     </footer>
 
     <script src="js/main.js" defer></script>
