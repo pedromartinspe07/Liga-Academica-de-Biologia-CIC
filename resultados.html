@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resultados - LABIC</title>
+    <title>Resultados da Pesquisa - LABIC | Liga Acadêmica de Biologia</title>
+    
+    <meta name="description" content="Apresentação dos principais resultados da pesquisa da LABIC através de gráficos interativos e análises. Veja as descobertas sobre bioindicadores, saneamento e biofiltração em Suape.">
+    <meta name="keywords" content="resultados, pesquisa, gráficos, dados, LABIC, bioindicadores, saneamento, biofiltração, tubarões, Porto de Suape">
+    <meta name="author" content="LABIC - Colégio Imaculada da Conceição">
+
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
     
     <link rel="stylesheet" href="css/style.css">
     
@@ -15,63 +21,93 @@
 <body>
 
     <header>
-        <nav>
+        <nav aria-label="Navegação Principal">
             <div class="logo">
-                <a href="index.html">
+                <a href="index.html" aria-label="Página inicial da LABIC">
                     <img src="assets/images/logo_labic.png" alt="Logo da LABIC - Liga Acadêmica de Biologia">
                 </a>
             </div>
             
-            <div class="menu-toggle" id="mobile-menu">
+            <div class="menu-toggle" id="mobile-menu" role="button" aria-controls="main-menu" aria-expanded="false" aria-label="Abrir menu de navegação">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
             
-            <ul class="nav-menu">
-                <li><a href="index.html">Início</a></li>
-                <li><a href="projeto.html">O Projeto</a></li>
-                <li><a href="referencial.html">Referencial</a></li>
-                <li><a href="resultados.html" class="active-link">Resultados</a></li>
-                <li><a href="publicacoes.html">Publicações</a></li>
-                <li><a href="dados.html">Dados</a></li>
-                <li><a href="glossario.html">Glossário</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="contato.html">Contato</a></li>
+            <ul class="nav-menu" id="main-menu" role="menubar">
+                <li role="menuitem"><a href="index.html">Início</a></li>
+                <li role="menuitem"><a href="projeto.html">O Projeto</a></li>
+                <li role="menuitem"><a href="referencial.html">Referencial</a></li>
+                <li role="menuitem"><a href="resultados.html" class="active-link">Resultados</a></li>
+                <li role="menuitem"><a href="publicacoes.html">Publicações</a></li>
+                <li role="menuitem"><a href="dados.html">Dados</a></li>
+                <li role="menuitem"><a href="glossario.html">Glossário</a></li>
+                <li role="menuitem"><a href="sobre.html">Sobre</a></li>
+                <li role="menuitem"><a href="contato.html">Contato</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="page-content">
         <div class="container">
-            <h1>Resultados da Pesquisa</h1>
+            <h1 class="page-title">Resultados da Pesquisa</h1>
+            <p class="subtitle">Transformando dados em descobertas: uma jornada visual pela ciência.</p>
 
             <section class="content-section">
-                <h2>Análise Gráfica</h2>
-                <p>Nesta seção, apresentamos as principais descobertas dos projetos da LABIC através de gráficos e visualizações de dados. Cada gráfico é acompanhado por uma breve análise que explica as conclusões tiradas a partir dos resultados.</p>
+                <p>Nesta seção, apresentamos os resultados dos projetos da LABIC por meio de **visualizações de dados** claras e objetivas. Cada gráfico e infográfico é acompanhado por uma análise que explica as principais descobertas, conectando os dados com as conclusões de nossas pesquisas.</p>
+                <div class="info-box">
+                    <p><strong>Quer ir além?</strong> Você pode baixar as bases de dados completas na página de <a href="dados.html">Dados</a> e explorar a metodologia na página de <a href="referencial.html">Referencial Teórico</a>.</p>
+                </div>
             </section>
             
             <section class="content-section chart-container">
-                <h2>Grupo 3º Ano A: Bioindicadores</h2>
+                <h2 class="section-title">Grupo 3º Ano: Bioindicadores da Qualidade da Água</h2>
                 <canvas id="bioindicadoresChart"></canvas>
                 <div class="chart-caption">
-                    <strong>Análise:</strong> Este gráfico compara os níveis de um poluente específico (Ex: Nível de nitrato na água) em diferentes pontos de coleta em Suape. Os resultados mostram um aumento significativo em áreas de maior influência industrial, indicando o impacto nas espécies bioindicadoras.
+                    <p><strong>Figura 1: Concentração de Nitrato (NO₃⁻) em Pontos de Coleta Próximos a Suape.</strong></p>
+                    <p>Este gráfico de barras compara os níveis de nitrato, um importante poluente, em diferentes pontos de amostragem na área de estudo. O ponto **"Estuário Ipojuca"** e **"Área de Afluição Industrial"** mostram concentrações significativamente mais altas que a área de controle (**"Praia de Calhetas"**), indicando um forte impacto das atividades portuárias e industriais na qualidade da água. Os dados corroboram a hipótese de que a poluição afeta diretamente a saúde das comunidades de bioindicadores.</p>
                 </div>
             </section>
 
             <section class="content-section chart-container">
-                <h2>Grupo 2º Ano A: Tubarões e Rotas</h2>
+                <h2 class="section-title">Grupo 2º Ano A: Tubarões e Rotas</h2>
                 <canvas id="sharksChart"></canvas>
                 <div class="chart-caption">
-                    <strong>Análise:</strong> Este gráfico ilustra o número de avistamentos de tubarões na costa do Recife ao longo dos anos, correlacionando-o com o volume de tráfego portuário em Suape. A tendência de crescimento sugere uma possível relação, que será aprofundada em nossas próximas publicações.
+                    <p><strong>Figura 2: Correlação entre Tráfego Portuário e Avistamentos de Tubarões.</strong></p>
+                    <p>Este gráfico de linha dupla ilustra a tendência de crescimento no volume de tráfego de navios no Porto de Suape (linha azul) e o aumento no número de avistamentos de tubarões na região metropolitana do Recife (linha laranja) ao longo de uma década. A forte correlação sugere uma possível relação causal, que pode estar ligada ao desequilíbrio ecológico e à alteração das rotas migratórias. Nossos dados abrem uma importante discussão sobre os impactos indiretos da atividade humana no comportamento da fauna marinha.</p>
+                </div>
+            </section>
+
+            <section class="content-section chart-container">
+                <h2 class="section-title">Grupo 2º Ano B: Saneamento na Ilha de Tatuoquinha</h2>
+                <canvas id="saneamentoChart"></canvas>
+                <div class="chart-caption">
+                    <p><strong>Figura 3: Relação entre Saneamento e Incidência de Doenças na Ilha de Tatuoquinha.</strong></p>
+                    <p>Este gráfico de pizza apresenta a distribuição das principais doenças relatadas pelos moradores da Ilha de Tatuoquinha em nosso questionário, com ênfase em infecções gastrointestinais e dermatológicas. A alta porcentagem de doenças relacionadas à falta de saneamento básico e ao contato com águas contaminadas confirma a hipótese inicial do nosso projeto, reforçando a urgência de melhorias na infraestrutura local.</p>
+                </div>
+            </section>
+
+            <section class="content-section chart-container">
+                <h2 class="section-title">Grupo 1º Ano: Biofiltração com Macroalgas</h2>
+                <canvas id="macroalgasChart"></canvas>
+                <div class="chart-caption">
+                    <p><strong>Figura 4: Eficiência de Biofiltração de Macroalgas em Amostras de Efluentes.</strong></p>
+                    <p>Este gráfico de barras múltiplas compara a capacidade de remoção de metais pesados (chumbo e cádmio) por três espécies de macroalgas nativas. A espécie **"Espécie B"** demonstrou a maior eficiência, superando as outras duas em quase 40%. Esses resultados são promissores e indicam o potencial da **biofiltração** como uma solução sustentável e de baixo custo para o tratamento de efluentes em áreas portuárias.</p>
                 </div>
             </section>
         </div>
     </main>
 
-    <footer>
-        <p>&copy; 2025 - LABIC | Liga Acadêmica de Biologia.</p>
-        <p>Orientação: Professor Vanbasten Rocha</p>
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <p>&copy; 2025 - LABIC | Liga Acadêmica de Biologia.</p>
+                <p>Orientação: Professor Vanbasten Rocha</p>
+            </div>
+            <div class="footer-social-links">
+                <a href="https://instagram.com/labic_oficial" target="_blank" aria-label="Instagram da LABIC"><img src="assets/images/icon_instagram.svg" alt="Instagram"></a>
+            </div>
+        </div>
     </footer>
 
     <script src="js/main.js" defer></script>
