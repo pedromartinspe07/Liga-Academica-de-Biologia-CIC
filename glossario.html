@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Glossário - LABIC</title>
+    <title>Glossário Científico - LABIC | Liga Acadêmica de Biologia</title>
+    
+    <meta name="description" content="Glossário de termos científicos e técnicos usados nos projetos de pesquisa da LABIC. Conheça as definições de bioindicadores, efluentes, biofiltração e outros conceitos-chave.">
+    <meta name="keywords" content="glossário, termos científicos, biologia, Porto de Suape, bioindicadores, efluentes, macroalgas, saneamento básico, ecossistema costeiro, remediação ambiental">
+    <meta name="author" content="LABIC - Colégio Imaculada da Conceição">
+
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
     
     <link rel="stylesheet" href="css/style.css">
     
@@ -14,69 +20,112 @@
 <body>
 
     <header>
-        <nav>
+        <nav aria-label="Navegação Principal">
             <div class="logo">
-                <a href="index.html">
+                <a href="index.html" aria-label="Página inicial da LABIC">
                     <img src="assets/images/logo_labic.png" alt="Logo da LABIC - Liga Acadêmica de Biologia">
                 </a>
             </div>
             
-            <div class="menu-toggle" id="mobile-menu">
+            <div class="menu-toggle" id="mobile-menu" role="button" aria-controls="main-menu" aria-expanded="false" aria-label="Abrir menu de navegação">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
             
-            <ul class="nav-menu">
-                <li><a href="index.html">Início</a></li>
-                <li><a href="projeto.html">O Projeto</a></li>
-                <li><a href="referencial.html">Referencial</a></li>
-                <li><a href="resultados.html">Resultados</a></li>
-                <li><a href="publicacoes.html">Publicações</a></li>
-                <li><a href="dados.html">Dados</a></li>
-                <li><a href="glossario.html" class="active-link">Glossário</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="contato.html">Contato</a></li>
+            <ul class="nav-menu" id="main-menu" role="menubar">
+                <li role="menuitem"><a href="index.html">Início</a></li>
+                <li role="menuitem"><a href="projeto.html">O Projeto</a></li>
+                <li role="menuitem"><a href="referencial.html">Referencial</a></li>
+                <li role="menuitem"><a href="resultados.html">Resultados</a></li>
+                <li role="menuitem"><a href="publicacoes.html">Publicações</a></li>
+                <li role="menuitem"><a href="dados.html">Dados</a></li>
+                <li role="menuitem"><a href="glossario.html" class="active-link">Glossário</a></li>
+                <li role="menuitem"><a href="sobre.html">Sobre</a></li>
+                <li role="menuitem"><a href="contato.html">Contato</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="page-content">
         <div class="container">
-            <h1>Glossário de Termos-Chave</h1>
+            <h1 class="page-title">Glossário de Termos-Chave</h1>
+            <p class="subtitle">Desvendando a ciência por trás das nossas pesquisas.</p>
 
-            <section class="content-section">
-                <p>Nesta seção, você encontrará uma lista de termos técnicos e siglas relacionados às nossas pesquisas. Este glossário foi criado para facilitar a compreensão e aprofundar o seu conhecimento sobre os temas abordados pela LABIC.</p>
+            <section class="content-section intro-glossary">
+                <p>Nesta seção, você encontrará uma lista de termos técnicos, siglas e conceitos relacionados às nossas pesquisas. Este glossário foi criado para facilitar a compreensão e aprofundar o seu conhecimento sobre os temas ambientais e biológicos abordados pela LABIC.</p>
+                <p>Utilize a navegação abaixo para encontrar rapidamente o que procura.</p>
             </section>
             
-            <section class="content-section">
-                <h2 id="termos">Termos e Definições</h2>
-                <dl class="glossary-list">
-                    <dt>Bioindicador</dt>
-                    <dd>Organismos vivos que, por sua sensibilidade a alterações ambientais, fornecem informações sobre a qualidade de um ecossistema. Exemplo: líquens para a qualidade do ar, e certas espécies de peixes ou insetos aquáticos para a água.</dd>
-                    
-                    <dt>Efluentes</dt>
-                    <dd>Resíduos líquidos, como esgoto ou dejetos industriais, que são descartados em corpos d'água. O tratamento de efluentes é crucial para evitar a poluição.</dd>
-                    
-                    <dt>Macroalgas</dt>
-                    <dd>Organismos fotossintetizantes que se parecem com plantas, mas não possuem raízes. Crescem em ambientes aquáticos e podem ser usadas para filtrar poluentes da água.</dd>
+            <nav class="glossary-nav" aria-label="Navegação do Glossário por letras">
+                <a href="#A">A</a>
+                <a href="#B">B</a>
+                <a href="#E">E</a>
+                <a href="#M">M</a>
+                <a href="#R">R</a>
+                <a href="#S">S</a>
+            </nav>
 
-                    <dt>Saneamento Básico</dt>
-                    <dd>Conjunto de serviços, infraestruturas e instalações operacionais de abastecimento de água potável, esgotamento sanitário, limpeza urbana e manejo de resíduos sólidos e de águas pluviais.</dd>
-                    
-                    <dt>Ecossistema Costeiro</dt>
-                    <dd>Áreas de transição entre o ambiente terrestre e o marinho, como manguezais e estuários, que abrigam uma grande biodiversidade e são fundamentais para o equilíbrio ambiental.</dd>
-                    
-                    <dt>Remediação Ambiental</dt>
-                    <dd>Processo de remoção de poluentes ou contaminantes de um ecossistema, como solo, água ou ar, para restaurar a sua condição natural.</dd>
-                </dl>
+            <section class="content-section glossary-list-container">
+                <div class="glossary-group" id="B">
+                    <h2>B</h2>
+                    <dl class="glossary-list">
+                        <dt id="bioindicador">Bioindicador</dt>
+                        <dd>Organismos vivos que, por sua sensibilidade a alterações ambientais, fornecem informações sobre a qualidade de um ecossistema. Por exemplo, a presença ou ausência de certas espécies de peixes, insetos aquáticos ou líquens pode indicar o nível de poluição na água ou no ar.</dd>
+                        
+                        <dt id="biofiltração">Biofiltração Inteligente</dt>
+                        <dd>Um processo biológico que utiliza organismos vivos, como micro-organismos ou, no nosso caso, **macroalgas**, para remover poluentes e contaminantes de efluentes líquidos. É uma alternativa sustentável a métodos químicos de tratamento de água.</dd>
+                    </dl>
+                </div>
+
+                <div class="glossary-group" id="E">
+                    <h2>E</h2>
+                    <dl class="glossary-list">
+                        <dt id="ecossistema">Ecossistema Costeiro</dt>
+                        <dd>Áreas de transição entre o ambiente terrestre e o marinho, como manguezais, estuários, praias e recifes de coral. Esses ecossistemas são extremamente frágeis e abrigam uma grande biodiversidade, desempenhando papéis cruciais no equilíbrio ambiental e na proteção contra erosão.</dd>
+                        
+                        <dt id="efluentes">Efluentes</dt>
+                        <dd>Resíduos líquidos, como esgoto doméstico, dejetos industriais ou águas pluviais contaminadas, que são descartados em corpos d'água. O tratamento adequado de efluentes é uma das principais estratégias para evitar a poluição de rios e oceanos.</dd>
+                    </dl>
+                </div>
+
+                <div class="glossary-group" id="M">
+                    <h2>M</h2>
+                    <dl class="glossary-list">
+                        <dt id="macroalgas">Macroalgas</dt>
+                        <dd>Organismos fotossintetizantes grandes e multicelulares, popularmente conhecidos como "algas marinhas". Apesar de se parecerem com plantas, não possuem raízes, caules ou folhas. São de grande importância ecológica e econômica, e podem ser usadas na biofiltração.</dd>
+                    </dl>
+                </div>
+
+                <div class="glossary-group" id="R">
+                    <h2>R</h2>
+                    <dl class="glossary-list">
+                        <dt id="remediacao">Remediação Ambiental</dt>
+                        <dd>O processo de limpeza e restauração de um ambiente contaminado (solo, água ou ar) através de diferentes técnicas, visando devolver a ele suas condições naturais ou seguras para a vida. A **biofiltração** é um tipo de remediação.</dd>
+                    </dl>
+                </div>
+
+                <div class="glossary-group" id="S">
+                    <h2>S</h2>
+                    <dl class="glossary-list">
+                        <dt id="saneamento">Saneamento Básico</dt>
+                        <dd>Conjunto de serviços, infraestruturas e instalações operacionais de abastecimento de água potável, esgotamento sanitário, limpeza urbana, manejo de resíduos sólidos e de águas pluviais. A falta de saneamento básico é um dos principais fatores de poluição e problemas de saúde pública em áreas urbanas.</dd>
+                    </dl>
+                </div>
             </section>
         </div>
     </main>
 
-    <footer>
-        <p>&copy; 2025 - LABIC | Liga Acadêmica de Biologia.</p>
-        <p>Orientação: Professor Vanbasten Rocha</p>
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <p>&copy; 2025 - LABIC | Liga Acadêmica de Biologia.</p>
+                <p>Orientação: Professor Vanbasten Rocha</p>
+            </div>
+            <div class="footer-social-links">
+                <a href="https://instagram.com/labic_oficial" target="_blank" aria-label="Instagram da LABIC"><img src="assets/images/icon_instagram.svg" alt="Instagram"></a>
+            </div>
+        </div>
     </footer>
 
     <script src="js/main.js" defer></script>
