@@ -3,7 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Publicações - LABIC</title>
+    <title>Publicações Científicas - LABIC | Liga Acadêmica de Biologia</title>
+    
+    <meta name="description" content="Acesse artigos científicos, resumos de congressos e pôsteres acadêmicos produzidos pelos membros da LABIC sobre os projetos de pesquisa em Suape.">
+    <meta name="keywords" content="publicações, artigos científicos, pesquisa, LABIC, Porto de Suape, biologia, resumos, pôsteres, relatórios, download">
+    <meta name="author" content="LABIC - Colégio Imaculada da Conceição">
+
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
     
     <link rel="stylesheet" href="css/style.css">
     
@@ -14,68 +20,105 @@
 <body>
 
     <header>
-        <nav>
+        <nav aria-label="Navegação Principal">
             <div class="logo">
-                <a href="index.html">
+                <a href="index.html" aria-label="Página inicial da LABIC">
                     <img src="assets/images/logo_labic.png" alt="Logo da LABIC - Liga Acadêmica de Biologia">
                 </a>
             </div>
             
-            <div class="menu-toggle" id="mobile-menu">
+            <div class="menu-toggle" id="mobile-menu" role="button" aria-controls="main-menu" aria-expanded="false" aria-label="Abrir menu de navegação">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
             </div>
             
-            <ul class="nav-menu">
-                <li><a href="index.html">Início</a></li>
-                <li><a href="projeto.html">O Projeto</a></li>
-                <li><a href="referencial.html">Referencial</a></li>
-                <li><a href="resultados.html">Resultados</a></li>
-                <li><a href="publicacoes.html" class="active-link">Publicações</a></li>
-                <li><a href="dados.html">Dados</a></li>
-                <li><a href="glossario.html">Glossário</a></li>
-                <li><a href="sobre.html">Sobre</a></li>
-                <li><a href="contato.html">Contato</a></li>
+            <ul class="nav-menu" id="main-menu" role="menubar">
+                <li role="menuitem"><a href="index.html">Início</a></li>
+                <li role="menuitem"><a href="projeto.html">O Projeto</a></li>
+                <li role="menuitem"><a href="referencial.html">Referencial</a></li>
+                <li role="menuitem"><a href="resultados.html">Resultados</a></li>
+                <li role="menuitem"><a href="publicacoes.html" class="active-link">Publicações</a></li>
+                <li role="menuitem"><a href="dados.html">Dados</a></li>
+                <li role="menuitem"><a href="glossario.html">Glossário</a></li>
+                <li role="menuitem"><a href="sobre.html">Sobre</a></li>
+                <li role="menuitem"><a href="contato.html">Contato</a></li>
             </ul>
         </nav>
     </header>
 
     <main class="page-content">
         <div class="container">
-            <h1>Nossas Publicações</h1>
+            <h1 class="page-title">Nossas Publicações</h1>
+            <p class="subtitle">Compartilhando conhecimento: ciência aberta e acessível para todos.</p>
 
-            <section class="content-section">
-                <p>Nesta seção, você pode acessar artigos, resumos de congressos e relatórios produzidos pelos membros da LABIC. Nosso compromisso é compartilhar o conhecimento e os resultados de nossa pesquisa com a comunidade acadêmica e o público em geral.</p>
+            <section class="content-section publication-intro">
+                <p>Nesta seção, você pode acessar artigos, resumos de congressos, pôsteres e relatórios produzidos pelos membros da LABIC. Nosso compromisso é compartilhar o conhecimento e os resultados de nossa pesquisa com a comunidade acadêmica e o público em geral, incentivando a colaboração e a transparência científica.</p>
+                <div class="info-box">
+                    <p><strong>Dica:</strong> Para obter mais detalhes sobre a metodologia e os dados brutos de cada pesquisa, visite as páginas <a href="referencial.html">Referencial</a> e <a href="dados.html">Dados</a>.</p>
+                </div>
             </section>
 
             <section class="content-section">
-                <h2>Artigos Científicos</h2>
+                <h2 class="section-title">Artigos e Relatórios</h2>
                 <ul class="publications-list">
                     <li class="publication-item">
                         <img class="publication-icon" src="assets/images/pdf_icon.svg" alt="Ícone de PDF">
                         <div class="publication-details">
                             <h3>Avaliação da Qualidade da Água em Pontos de Coleta Próximos a Suape</h3>
-                            <p class="pub-description">**Grupo 3º Ano A** - Este artigo detalha a metodologia e os resultados da análise de bioindicadores em ecossistemas costeiros, evidenciando o impacto das atividades portuárias.</p>
-                            <a href="#" class="download-link" download>Download PDF</a>
+                            <p class="pub-description">**Grupo 3º Ano:** Este relatório detalhado apresenta a metodologia e os resultados da análise de bioindicadores em ecossistemas costeiros, evidenciando o impacto das atividades portuárias na saúde da água e na biodiversidade local.</p>
+                            <p class="pub-authors">**Autores:** A. Lemos, M. Laura, L. Beatriz, T. Paiva, M. Letícia, M. Eduarda, P. Martins.</p>
+                            <a href="assets/publications/artigo-bioindicadores.pdf" class="download-link" download aria-label="Download do artigo sobre bioindicadores em formato PDF">Download PDF</a>
                         </div>
                     </li>
                     <li class="publication-item">
                         <img class="publication-icon" src="assets/images/pdf_icon.svg" alt="Ícone de PDF">
                         <div class="publication-details">
                             <h3>A Relação entre o Tráfego Portuário e a Ocorrência de Tubarões</h3>
-                            <p class="pub-description">**Grupo 2º Ano A** - Um estudo exploratório sobre os fatores ambientais e as possíveis correlações entre a expansão de Suape e o aumento de incidentes com tubarões.</p>
-                            <a href="#" class="download-link" download>Download PDF</a>
+                            <p class="pub-description">**Grupo 2º Ano A:** Um estudo exploratório sobre os fatores ambientais e as possíveis correlações entre a expansão de Suape e o aumento de incidentes com tubarões na costa do Recife. Este documento é o primeiro passo para uma pesquisa mais aprofundada.</p>
+                            <p class="pub-authors">**Autores:** M. E. Gaspar, Mayra, M. Clara, A. B. Canto, Y. Melo, J. Beatriz, J. Azevedo.</p>
+                            <a href="assets/publications/relatorio-tubaroes.pdf" class="download-link" download aria-label="Download do relatório sobre tráfego portuário e tubarões em formato PDF">Download PDF</a>
+                        </div>
+                    </li>
+                    <li class="publication-item">
+                        <img class="publication-icon" src="assets/images/pdf_icon.svg" alt="Ícone de PDF">
+                        <div class="publication-details">
+                            <h3>Biofiltração de Efluentes com Macroalgas em Suape</h3>
+                            <p class="pub-description">**Grupo 1º Ano:** Este relatório técnico descreve os experimentos e os resultados preliminares sobre a eficiência de espécies nativas de macroalgas na remoção de contaminantes de amostras de efluentes coletadas na área portuária.</p>
+                            <p class="pub-authors">**Autores:** F. Nascimento, G. Machado, G. Marinho, A. Vitória, H. Silva, B. Rodrigues.</p>
+                            <a href="assets/publications/relatorio-biofiltracao.pdf" class="download-link" download aria-label="Download do relatório sobre biofiltração com macroalgas em formato PDF">Download PDF</a>
                         </div>
                     </li>
                 </ul>
             </section>
+            
+            <section class="content-section">
+                <h2 class="section-title">Apresentações e Pôsteres de Congressos</h2>
+                <p>Nossos projetos são frequentemente apresentados em eventos e congressos científicos. Aqui você pode visualizar os pôsteres e slides que utilizamos para divulgar nossa pesquisa para a comunidade acadêmica.</p>
+                <div class="publication-gallery">
+                    <a href="assets/publications/poster-3ano.png" class="gallery-item" aria-label="Pôster do Grupo 3º Ano sobre Bioindicadores de Suape">
+                        <img src="assets/images/poster_thumbnail_3a.png" alt="Miniatura do Pôster de Pesquisa do 3º Ano" class="gallery-thumbnail">
+                        <span>Pôster: Bioindicadores (3º Ano)</span>
+                    </a>
+                    <a href="assets/publications/poster-2a.png" class="gallery-item" aria-label="Pôster do Grupo 2º Ano A sobre a relação entre Porto e Tubarões">
+                        <img src="assets/images/poster_thumbnail_2a.png" alt="Miniatura do Pôster de Pesquisa do 2º Ano A" class="gallery-thumbnail">
+                        <span>Pôster: Rotas Alteradas (2º Ano A)</span>
+                    </a>
+                </div>
+            </section>
         </div>
     </main>
 
-    <footer>
-        <p>&copy; 2025 - LABIC | Liga Acadêmica de Biologia.</p>
-        <p>Orientação: Professor Vanbasten Rocha</p>
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <p>&copy; 2025 - LABIC | Liga Acadêmica de Biologia.</p>
+                <p>Orientação: Professor Vanbasten Rocha</p>
+            </div>
+            <div class="footer-social-links">
+                <a href="https://instagram.com/labic_oficial" target="_blank" aria-label="Instagram da LABIC"><img src="assets/images/icon_instagram.svg" alt="Instagram"></a>
+            </div>
+        </div>
     </footer>
 
     <script src="js/main.js" defer></script>
