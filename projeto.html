@@ -9,6 +9,12 @@
     <meta name="keywords" content="projetos de pesquisa, LABIC, biologia, Porto de Suape, bioindicadores, saneamento, tubarões, macroalgas, ciência, CIC">
     <meta name="author" content="LABIC - Colégio Imaculada da Conceição">
 
+    <meta property="og:title" content="Projetos de Pesquisa - LABIC">
+    <meta property="og:description" content="Conheça os projetos de pesquisa da LABIC, com foco nos impactos ambientais do Porto de Suape.">
+    <meta property="og:image" content="https://seusite.com/assets/images/logo_labic_social.png">
+    <meta property="og:url" content="https://seusite.com/projeto.html">
+    <meta property="og:type" content="website">
+
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
     
     <link rel="stylesheet" href="css/style.css">
@@ -20,30 +26,50 @@
 <body>
 
     <header>
-        <nav aria-label="Navegação Principal">
-            <div class="logo">
-                <a href="index.html" aria-label="Página inicial da LABIC">
-                    <img src="assets/images/logo_labic.png" alt="Logo da LABIC - Liga Acadêmica de Biologia">
+        <nav class="navbar" role="navigation" aria-label="Menu Principal">
+            <div class="container-fluid">
+                <a class="navbar-logo" href="index.html">
+                    <img src="assets/images/logo_labic.png" alt="Ícone da Logo" height="40">
                 </a>
+
+                <button class="navbar-toggler" type="button" aria-controls="main-menu" aria-expanded="false" aria-label="Abrir menu de navegação">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+
+                <div class="navbar-collapse" id="main-menu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="projeto.html">O Projeto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="referencial.html">Referencial</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="resultados.html">Resultados</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="publicacoes.html">Publicações</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="dados.html">Dados</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="glossario.html">Glossário</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sobre.html">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contato.html">Contato</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            
-            <div class="menu-toggle" id="mobile-menu" role="button" aria-controls="main-menu" aria-expanded="false" aria-label="Abrir menu de navegação">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            
-            <ul class="nav-menu" id="main-menu" role="menubar">
-                <li role="menuitem"><a href="index.html">Início</a></li>
-                <li role="menuitem"><a href="projeto.html" class="active-link">O Projeto</a></li>
-                <li role="menuitem"><a href="referencial.html">Referencial</a></li>
-                <li role="menuitem"><a href="resultados.html">Resultados</a></li>
-                <li role="menuitem"><a href="publicacoes.html">Publicações</a></li>
-                <li role="menuitem"><a href="dados.html">Dados</a></li>
-                <li role="menuitem"><a href="glossario.html">Glossário</a></li>
-                <li role="menuitem"><a href="sobre.html">Sobre</a></li>
-                <li role="menuitem"><a href="contato.html">Contato</a></li>
-            </ul>
         </nav>
     </header>
 
@@ -53,19 +79,19 @@
             <p class="subtitle">Apresentando o trabalho de nossos jovens pesquisadores em busca de soluções ambientais.</p>
 
             <section class="content-section">
-                <p>Na Liga Acadêmica de Biologia do Colégio Imaculada da Conceição (LABIC), nossos alunos se dedicam a investigar questões ambientais e sociais reais, com foco na área de influência do **Porto de Suape**. Cada projeto é uma jornada de descoberta, onde a teoria da sala de aula é aplicada para gerar conhecimento e impacto positivo na comunidade.</p>
+                <p>Na Liga Acadêmica de Biologia do Colégio Imaculada da Conceição (LABIC), nossos alunos se dedicam a investigar questões ambientais e sociais reais, com foco na área de influência do Porto de Suape. Cada projeto é uma jornada de descoberta, onde a teoria da sala de aula é aplicada para gerar conhecimento e impacto positivo na comunidade.</p>
             </section>
 
             <section class="content-section project-card" id="bioindicadores">
                 <div class="project-header">
-                    <img src="assets/images/project_3a_hero.jpg" alt="Foto da equipe do 3º ano em trabalho de campo" class="project-image">
+                    <img src="assets/images/project_3a_hero.png" alt="Foto da equipe do 3º ano em trabalho de campo" class="project-image">
                     <div class="project-info">
                         <span class="project-year">Grupo 3º Ano</span>
                         <h2 class="project-title">Bioindicadores da Qualidade da Água</h2>
                     </div>
                 </div>
                 <div class="project-details">
-                    <p class="project-description">Este grupo investiga como a poluição na área de influência do Porto de Suape afeta os **ecossistemas aquáticos**. O objetivo é utilizar organismos vivos (os **bioindicadores**) para monitorar a saúde da água, fornecendo dados concretos sobre o impacto das atividades portuárias. A pesquisa envolve a coleta e análise de amostras de água e a identificação de espécies sensíveis à poluição.</p>
+                    <p class="project-description">Este grupo investiga como a poluição na área de influência do Porto de Suape afeta os ecossistemas aquáticos. O objetivo é utilizar organismos vivos (os bioindicadores) para monitorar a saúde da água, fornecendo dados concretos sobre o impacto das atividades portuárias. A pesquisa envolve a coleta e análise de amostras de água e a identificação de espécies sensíveis à poluição.</p>
                     <a href="referencial.html#bioindicadores" class="cta-button">Ver Referencial Teórico →</a>
                     
                     <div class="team-section">
@@ -85,14 +111,14 @@
 
             <section class="content-section project-card" id="rotas">
                 <div class="project-header">
-                    <img src="assets/images/project_2a_hero.jpg" alt="Ilustração de um tubarão nadando em águas costeiras" class="project-image">
+                    <img src="assets/images/tubarao_nadando_em_aguas_costeiras.png" alt="Ilustração de um tubarão nadando em águas costeiras" class="project-image">
                     <div class="project-info">
                         <span class="project-year">Grupo 2º Ano A</span>
                         <h2 class="project-title">Rotas Alteradas? Tubarões e o Porto</h2>
                     </div>
                 </div>
                 <div class="project-details">
-                    <p class="project-description">O projeto questiona a possível relação entre as atividades do **Porto de Suape e o aumento da ocorrência de tubarões** na costa do Recife. A equipe busca analisar dados e investigar as hipóteses que conectam a poluição, a alteração de ecossistemas e o comportamento desses animais, contribuindo para o debate sobre segurança e conservação marinha.</p>
+                    <p class="project-description">O projeto questiona a possível relação entre as atividades do Porto de Suape e o aumento da ocorrência de tubarões na costa do Recife. A equipe busca analisar dados e investigar as hipóteses que conectam a poluição, a alteração de ecossistemas e o comportamento desses animais, contribuindo para o debate sobre segurança e conservação marinha.</p>
                     <a href="referencial.html#rotas" class="cta-button">Ver Referencial Teórico →</a>
 
                     <div class="team-section">
@@ -112,14 +138,14 @@
 
             <section class="content-section project-card" id="saneamento">
                 <div class="project-header">
-                    <img src="assets/images/project_2b_hero.jpg" alt="Foto de um mapa da Ilha de Tatuoquinha com dados" class="project-image">
+                    <img src="assets/images/project_2b_hero.png" alt="Foto de um mapa da Ilha de Tatuoquinha com dados" class="project-image">
                     <div class="project-info">
                         <span class="project-year">Grupo 2º Ano B</span>
                         <h2 class="project-title">Impactos do Saneamento Básico em Tatuoquinha</h2>
                     </div>
                 </div>
                 <div class="project-details">
-                    <p class="project-description">Focado na saúde pública e ambiental, este projeto estuda como a falta de **saneamento básico** na Ilha de Tatuoquinha, área próxima a Suape, afeta a saúde dos moradores e o meio ambiente local. O estudo visa propor soluções e conscientizar sobre a importância da infraestrutura sanitária para a qualidade de vida e a preservação do ecossistema.</p>
+                    <p class="project-description">Focado na saúde pública e ambiental, este projeto estuda como a falta de saneamento básico na Ilha de Tatuoquinha, área próxima a Suape, afeta a saúde dos moradores e o meio ambiente local. O estudo visa propor soluções e conscientizar sobre a importância da infraestrutura sanitária para a qualidade de vida e a preservação do ecossistema.</p>
                     <a href="referencial.html#saneamento" class="cta-button">Ver Referencial Teórico →</a>
 
                     <div class="team-section">
@@ -139,14 +165,14 @@
 
             <section class="content-section project-card" id="biofiltracao">
                 <div class="project-header">
-                    <img src="assets/images/project_1a_hero.jpg" alt="Foto de macroalgas em um recipiente de laboratório" class="project-image">
+                    <img src="assets/images/project_1a_hero.png" alt="Foto de macroalgas em um recipiente de laboratório" class="project-image">
                     <div class="project-info">
                         <span class="project-year">Grupo 1º Ano</span>
                         <h2 class="project-title">Biofiltração com Macroalgas</h2>
                     </div>
                 </div>
                 <div class="project-details">
-                    <p class="project-description">Este grupo explora uma solução biológica e sustentável para o tratamento de **efluentes industriais**. A pesquisa avalia a eficiência de diferentes espécies de **macroalgas** na filtração de substâncias poluentes encontradas em áreas portuárias, propondo uma alternativa natural para a **remediação ambiental**.</p>
+                    <p class="project-description">Este grupo explora uma solução biológica e sustentável para o tratamento de efluentes industriais. A pesquisa avalia a eficiência de diferentes espécies de macroalgas na filtração de substâncias poluentes encontradas em áreas portuárias, propondo uma alternativa natural para a remediação ambiental.</p>
                     <a href="referencial.html#biofiltracao" class="cta-button">Ver Referencial Teórico →</a>
 
                     <div class="team-section">
@@ -158,6 +184,7 @@
                             <li>Alícia Vitória</li>
                             <li>Heitor</li>
                             <li>Bruno</li>
+                            <li>Maria Lúcia</li>
                         </ul>
                     </div>
                 </div>
@@ -181,7 +208,7 @@
                 <p>Orientação: Professor Vanbasten Rocha</p>
             </div>
             <div class="footer-social-links">
-                <a href="https://instagram.com/labic_oficial" target="_blank" aria-label="Instagram da LABIC"><img src="assets/images/icon_instagram.svg" alt="Instagram"></a>
+                <a href="https://www.instagram.com/labic.imaculada/" target="_blank" rel="noopener noreferrer" aria-label="Instagram da LABIC"><img src="assets/images/icon_instagram.gif" alt="Instagram"></a>
             </div>
         </div>
     </footer>

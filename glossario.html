@@ -9,6 +9,12 @@
     <meta name="keywords" content="glossário, termos científicos, biologia, Porto de Suape, bioindicadores, efluentes, macroalgas, saneamento básico, ecossistema costeiro, remediação ambiental">
     <meta name="author" content="LABIC - Colégio Imaculada da Conceição">
 
+    <meta property="og:title" content="Glossário Científico - LABIC">
+    <meta property="og:description" content="Aprenda sobre os termos técnicos e conceitos-chave das pesquisas da LABIC, como bioindicadores, efluentes e biofiltração.">
+    <meta property="og:image" content="https://seusite.com/assets/images/logo_labic_social.png">
+    <meta property="og:url" content="https://seusite.com/glossario.html">
+    <meta property="og:type" content="website">
+
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
     
     <link rel="stylesheet" href="css/style.css">
@@ -20,30 +26,50 @@
 <body>
 
     <header>
-        <nav aria-label="Navegação Principal">
-            <div class="logo">
-                <a href="index.html" aria-label="Página inicial da LABIC">
-                    <img src="assets/images/logo_labic.png" alt="Logo da LABIC - Liga Acadêmica de Biologia">
+        <nav class="navbar" role="navigation" aria-label="Menu Principal">
+            <div class="container-fluid">
+                <a class="navbar-logo" href="index.html">
+                    <img src="assets/images/logo_labic.png" alt="Ícone da Logo" height="40">
                 </a>
+
+                <button class="navbar-toggler" type="button" aria-controls="main-menu" aria-expanded="false" aria-label="Abrir menu de navegação">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+
+                <div class="navbar-collapse" id="main-menu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="projeto.html">O Projeto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="referencial.html">Referencial</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="resultados.html">Resultados</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="publicacoes.html">Publicações</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="dados.html">Dados</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="glossario.html">Glossário</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sobre.html">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contato.html">Contato</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            
-            <div class="menu-toggle" id="mobile-menu" role="button" aria-controls="main-menu" aria-expanded="false" aria-label="Abrir menu de navegação">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            
-            <ul class="nav-menu" id="main-menu" role="menubar">
-                <li role="menuitem"><a href="index.html">Início</a></li>
-                <li role="menuitem"><a href="projeto.html">O Projeto</a></li>
-                <li role="menuitem"><a href="referencial.html">Referencial</a></li>
-                <li role="menuitem"><a href="resultados.html">Resultados</a></li>
-                <li role="menuitem"><a href="publicacoes.html">Publicações</a></li>
-                <li role="menuitem"><a href="dados.html">Dados</a></li>
-                <li role="menuitem"><a href="glossario.html" class="active-link">Glossário</a></li>
-                <li role="menuitem"><a href="sobre.html">Sobre</a></li>
-                <li role="menuitem"><a href="contato.html">Contato</a></li>
-            </ul>
         </nav>
     </header>
 
@@ -74,7 +100,7 @@
                         <dd>Organismos vivos que, por sua sensibilidade a alterações ambientais, fornecem informações sobre a qualidade de um ecossistema. Por exemplo, a presença ou ausência de certas espécies de peixes, insetos aquáticos ou líquens pode indicar o nível de poluição na água ou no ar.</dd>
                         
                         <dt id="biofiltração">Biofiltração Inteligente</dt>
-                        <dd>Um processo biológico que utiliza organismos vivos, como micro-organismos ou, no nosso caso, **macroalgas**, para remover poluentes e contaminantes de efluentes líquidos. É uma alternativa sustentável a métodos químicos de tratamento de água.</dd>
+                        <dd>Um processo biológico que utiliza organismos vivos, como micro-organismos ou, no nosso caso, macroalgas para remover poluentes e contaminantes de efluentes líquidos. É uma alternativa sustentável a métodos químicos de tratamento de água.</dd>
                     </dl>
                 </div>
 
@@ -101,7 +127,7 @@
                     <h2>R</h2>
                     <dl class="glossary-list">
                         <dt id="remediacao">Remediação Ambiental</dt>
-                        <dd>O processo de limpeza e restauração de um ambiente contaminado (solo, água ou ar) através de diferentes técnicas, visando devolver a ele suas condições naturais ou seguras para a vida. A **biofiltração** é um tipo de remediação.</dd>
+                        <dd>O processo de limpeza e restauração de um ambiente contaminado (solo, água ou ar) através de diferentes técnicas, visando devolver a ele suas condições naturais ou seguras para a vida. A biofiltração é um tipo de remediação.</dd>
                     </dl>
                 </div>
 
@@ -123,7 +149,7 @@
                 <p>Orientação: Professor Vanbasten Rocha</p>
             </div>
             <div class="footer-social-links">
-                <a href="https://instagram.com/labic_oficial" target="_blank" aria-label="Instagram da LABIC"><img src="assets/images/icon_instagram.svg" alt="Instagram"></a>
+                <a href="https://www.instagram.com/labic.imaculada/" target="_blank" rel="noopener noreferrer" aria-label="Instagram da LABIC"><img src="assets/images/icon_instagram.gif" alt="Ícone do Instagram"></a>
             </div>
         </div>
     </footer>

@@ -3,21 +3,28 @@ document.addEventListener('DOMContentLoaded', () => {
     // ===========================================
     // 1. Controle do Menu Responsivo (Hambúrguer)
     // ===========================================
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navMenu = document.querySelector('.nav-menu');
+    const navbarToggler = document.querySelector('.navbar-toggler');
+    const navbarCollapse = document.querySelector('.navbar-collapse');
+    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
 
-    if (menuToggle && navMenu) {
-        // Alterna a classe 'active' no clique para abrir/fechar o menu
-        menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-            menuToggle.classList.toggle('active');
-        });
+    if (navbarToggler && navbarCollapse) {
+        // Função para alternar o estado do menu
+        const toggleMenu = () => {
+            const isExpanded = navbarToggler.getAttribute('aria-expanded') === 'true';
+            navbarToggler.setAttribute('aria-expanded', !isExpanded);
+            navbarCollapse.classList.toggle('show');
+        };
 
-        // Fecha o menu quando um link é clicado (útil em menus de página única)
-        navMenu.querySelectorAll('a').forEach(link => {
+        // Abre/fecha o menu ao clicar no botão
+        navbarToggler.addEventListener('click', toggleMenu);
+
+        // Fecha o menu quando um link é clicado
+        navLinks.forEach(link => {
             link.addEventListener('click', () => {
-                navMenu.classList.remove('active');
-                menuToggle.classList.remove('active');
+                // Checa se o menu está aberto para telas menores antes de fechar
+                if (window.innerWidth <= 992) {
+                    toggleMenu();
+                }
             });
         });
     }
@@ -67,35 +74,40 @@ document.addEventListener('DOMContentLoaded', () => {
     // ===========================================
     // 4. Destaque do Menu de acordo com a Posição
     // ===========================================
-    const navLinks = document.querySelectorAll('.nav-menu a');
     const sectionsToObserve = document.querySelectorAll('section');
 
     const navObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // Remove a classe 'active-link' de todos os links
+                // Remove a classe 'active' de todos os links
                 navLinks.forEach(link => {
-                    link.classList.remove('active-link');
+                    link.classList.remove('active');
+                    link.removeAttribute('aria-current'); // Melhoria de acessibilidade
                 });
                 
-                // Adiciona 'active-link' ao link correspondente à seção visível
+                // Adiciona 'active' ao link correspondente à seção visível
                 const currentId = entry.target.id;
-                const correspondingLink = document.querySelector(`.nav-menu a[href*="#${currentId}"]`);
+                const correspondingLink = document.querySelector(`.nav-link[href*="#${currentId}"]`);
                 if (correspondingLink) {
-                    correspondingLink.classList.add('active-link');
+                    correspondingLink.classList.add('active');
+                    correspondingLink.setAttribute('aria-current', 'page');
                 } else {
-                    // Para a página inicial, se não houver ID correspondente, ativa o link de Início
-                    document.querySelector('.nav-menu a[href="index.html"]').classList.add('active-link');
+                    // Ativa o link de Início se a seção atual não tiver ID (p. ex., Hero)
+                    const homeLink = document.querySelector('.nav-link[href="index.html"]');
+                    if (homeLink) {
+                        homeLink.classList.add('active');
+                        homeLink.setAttribute('aria-current', 'page');
+                    }
                 }
             }
         });
     }, {
-        rootMargin: '-50% 0px -50% 0px', // Ajusta a margem para que o centro da tela dispare a interseção
+        rootMargin: '-50% 0px -50% 0px', // O centro da tela dispara a interseção
         threshold: 0
     });
 
     sectionsToObserve.forEach(section => {
-        if (section.id) { // Observa apenas seções com ID para vincular ao menu
+        if (section.id) { // Observa apenas seções com ID
             navObserver.observe(section);
         }
     });

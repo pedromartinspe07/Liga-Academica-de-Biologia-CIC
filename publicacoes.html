@@ -9,6 +9,12 @@
     <meta name="keywords" content="publicações, artigos científicos, pesquisa, LABIC, Porto de Suape, biologia, resumos, pôsteres, relatórios, download">
     <meta name="author" content="LABIC - Colégio Imaculada da Conceição">
 
+    <meta property="og:title" content="Publicações Científicas - LABIC">
+    <meta property="og:description" content="Acesse artigos, pôsteres e relatórios produzidos pelos membros da LABIC, compartilhando os resultados de nossas pesquisas em Suape.">
+    <meta property="og:image" content="https://seusite.com/assets/images/logo_labic_social.png">
+    <meta property="og:url" content="https://seusite.com/publicacoes.html">
+    <meta property="og:type" content="website">
+
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
     
     <link rel="stylesheet" href="css/style.css">
@@ -20,30 +26,50 @@
 <body>
 
     <header>
-        <nav aria-label="Navegação Principal">
-            <div class="logo">
-                <a href="index.html" aria-label="Página inicial da LABIC">
-                    <img src="assets/images/logo_labic.png" alt="Logo da LABIC - Liga Acadêmica de Biologia">
+        <nav class="navbar" role="navigation" aria-label="Menu Principal">
+            <div class="container-fluid">
+                <a class="navbar-logo" href="index.html">
+                    <img src="assets/images/logo_labic.png" alt="Ícone da Logo" height="40">
                 </a>
+
+                <button class="navbar-toggler" type="button" aria-controls="main-menu" aria-expanded="false" aria-label="Abrir menu de navegação">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+
+                <div class="navbar-collapse" id="main-menu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="projeto.html">O Projeto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="referencial.html">Referencial</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="resultados.html">Resultados</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="publicacoes.html">Publicações</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="dados.html">Dados</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="glossario.html">Glossário</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sobre.html">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contato.html">Contato</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            
-            <div class="menu-toggle" id="mobile-menu" role="button" aria-controls="main-menu" aria-expanded="false" aria-label="Abrir menu de navegação">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            
-            <ul class="nav-menu" id="main-menu" role="menubar">
-                <li role="menuitem"><a href="index.html">Início</a></li>
-                <li role="menuitem"><a href="projeto.html">O Projeto</a></li>
-                <li role="menuitem"><a href="referencial.html">Referencial</a></li>
-                <li role="menuitem"><a href="resultados.html">Resultados</a></li>
-                <li role="menuitem"><a href="publicacoes.html" class="active-link">Publicações</a></li>
-                <li role="menuitem"><a href="dados.html">Dados</a></li>
-                <li role="menuitem"><a href="glossario.html">Glossário</a></li>
-                <li role="menuitem"><a href="sobre.html">Sobre</a></li>
-                <li role="menuitem"><a href="contato.html">Contato</a></li>
-            </ul>
         </nav>
     </header>
 
@@ -66,8 +92,8 @@
                         <img class="publication-icon" src="assets/images/pdf_icon.svg" alt="Ícone de PDF">
                         <div class="publication-details">
                             <h3>Avaliação da Qualidade da Água em Pontos de Coleta Próximos a Suape</h3>
-                            <p class="pub-description">**Grupo 3º Ano:** Este relatório detalhado apresenta a metodologia e os resultados da análise de bioindicadores em ecossistemas costeiros, evidenciando o impacto das atividades portuárias na saúde da água e na biodiversidade local.</p>
-                            <p class="pub-authors">**Autores:** A. Lemos, M. Laura, L. Beatriz, T. Paiva, M. Letícia, M. Eduarda, P. Martins.</p>
+                            <p class="pub-description">Grupo 3º Ano: Este relatório detalhado apresenta a metodologia e os resultados da análise de bioindicadores em ecossistemas costeiros, evidenciando o impacto das atividades portuárias na saúde da água e na biodiversidade local.</p>
+                            <p class="pub-authors">Autores: A. Lemos, M. Laura, L. Beatriz, T. Paiva, M. Letícia, M. Eduarda, P. Martins.</p>
                             <a href="assets/publications/artigo-bioindicadores.pdf" class="download-link" download aria-label="Download do artigo sobre bioindicadores em formato PDF">Download PDF</a>
                         </div>
                     </li>
@@ -75,8 +101,8 @@
                         <img class="publication-icon" src="assets/images/pdf_icon.svg" alt="Ícone de PDF">
                         <div class="publication-details">
                             <h3>A Relação entre o Tráfego Portuário e a Ocorrência de Tubarões</h3>
-                            <p class="pub-description">**Grupo 2º Ano A:** Um estudo exploratório sobre os fatores ambientais e as possíveis correlações entre a expansão de Suape e o aumento de incidentes com tubarões na costa do Recife. Este documento é o primeiro passo para uma pesquisa mais aprofundada.</p>
-                            <p class="pub-authors">**Autores:** M. E. Gaspar, Mayra, M. Clara, A. B. Canto, Y. Melo, J. Beatriz, J. Azevedo.</p>
+                            <p class="pub-description">Grupo 2º Ano A: Um estudo exploratório sobre os fatores ambientais e as possíveis correlações entre a expansão de Suape e o aumento de incidentes com tubarões na costa do Recife. Este documento é o primeiro passo para uma pesquisa mais aprofundada.</p>
+                            <p class="pub-authors">Autores: M. E. Gaspar, Mayra, M. Clara, A. B. Canto, Y. Melo, J. Beatriz, J. Azevedo.</p>
                             <a href="assets/publications/relatorio-tubaroes.pdf" class="download-link" download aria-label="Download do relatório sobre tráfego portuário e tubarões em formato PDF">Download PDF</a>
                         </div>
                     </li>
@@ -84,8 +110,8 @@
                         <img class="publication-icon" src="assets/images/pdf_icon.svg" alt="Ícone de PDF">
                         <div class="publication-details">
                             <h3>Biofiltração de Efluentes com Macroalgas em Suape</h3>
-                            <p class="pub-description">**Grupo 1º Ano:** Este relatório técnico descreve os experimentos e os resultados preliminares sobre a eficiência de espécies nativas de macroalgas na remoção de contaminantes de amostras de efluentes coletadas na área portuária.</p>
-                            <p class="pub-authors">**Autores:** F. Nascimento, G. Machado, G. Marinho, A. Vitória, H. Silva, B. Rodrigues.</p>
+                            <p class="pub-description">Grupo 1º Ano: Este relatório técnico descreve os experimentos e os resultados preliminares sobre a eficiência de espécies nativas de macroalgas na remoção de contaminantes de amostras de efluentes coletadas na área portuária.</p>
+                            <p class="pub-authors">Autores: F. Nascimento, G. Machado, G. Marinho, A. Vitória, H. Silva, B. Rodrigues.</p>
                             <a href="assets/publications/relatorio-biofiltracao.pdf" class="download-link" download aria-label="Download do relatório sobre biofiltração com macroalgas em formato PDF">Download PDF</a>
                         </div>
                     </li>
@@ -116,7 +142,7 @@
                 <p>Orientação: Professor Vanbasten Rocha</p>
             </div>
             <div class="footer-social-links">
-                <a href="https://instagram.com/labic_oficial" target="_blank" aria-label="Instagram da LABIC"><img src="assets/images/icon_instagram.svg" alt="Instagram"></a>
+                <a href="https://www.instagram.com/labic.imaculada/" target="_blank" rel="noopener noreferrer" aria-label="Instagram da LABIC"><img src="assets/images/icon_instagram.gif" alt="Ícone do Instagram"></a>
             </div>
         </div>
     </footer>

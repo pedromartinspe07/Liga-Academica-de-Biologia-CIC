@@ -9,6 +9,12 @@
     <meta name="keywords" content="dados, pesquisa, ciência, LABIC, download, Suape, bioindicadores, saneamento, dados abertos, CSV, XLS">
     <meta name="author" content="LABIC - Colégio Imaculada da Conceição">
 
+    <meta property="og:title" content="Dados da Pesquisa - LABIC">
+    <meta property="og:description" content="Ciência aberta: acesse e baixe os dados brutos de pesquisa da LABIC para fins de estudo e análise.">
+    <meta property="og:image" content="https://seusite.com/assets/images/logo_labic_social.png">
+    <meta property="og:url" content="https://seusite.com/dados.html">
+    <meta property="og:type" content="website">
+
     <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
     
     <link rel="stylesheet" href="css/style.css">
@@ -20,88 +26,141 @@
 <body>
 
     <header>
-        <nav aria-label="Navegação Principal">
-            <div class="logo">
-                <a href="index.html" aria-label="Página inicial da LABIC">
-                    <img src="assets/images/logo_labic.png" alt="Logo da LABIC - Liga Acadêmica de Biologia">
+        <nav class="navbar" role="navigation" aria-label="Menu Principal">
+            <div class="container-fluid">
+                <a class="navbar-logo" href="index.html">
+                    <img src="assets/images/logo_labic.png" alt="Ícone da Logo" height="40">
                 </a>
+
+                <button class="navbar-toggler" type="button" aria-controls="main-menu" aria-expanded="false" aria-label="Abrir menu de navegação">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+
+                <div class="navbar-collapse" id="main-menu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="projeto.html">O Projeto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="referencial.html">Referencial</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="resultados.html">Resultados</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="publicacoes.html">Publicações</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="dados.html">Dados</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="glossario.html">Glossário</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sobre.html">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contato.html">Contato</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
-            
-            <div class="menu-toggle" id="mobile-menu" role="button" aria-controls="main-menu" aria-expanded="false" aria-label="Abrir menu de navegação">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            
-            <ul class="nav-menu" id="main-menu" role="menubar">
-                <li role="menuitem"><a href="index.html">Início</a></li>
-                <li role="menuitem"><a href="projeto.html">O Projeto</a></li>
-                <li role="menuitem"><a href="referencial.html">Referencial</a></li>
-                <li role="menuitem"><a href="resultados.html">Resultados</a></li>
-                <li role="menuitem"><a href="publicacoes.html">Publicações</a></li>
-                <li role="menuitem"><a href="dados.html" class="active-link">Dados</a></li>
-                <li role="menuitem"><a href="glossario.html">Glossário</a></li>
-                <li role="menuitem"><a href="sobre.html">Sobre</a></li>
-                <li role="menuitem"><a href="contato.html">Contato</a></li>
-            </ul>
         </nav>
     </header>
 
     <main class="page-content">
         <div class="container">
+            <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+                <ol class="breadcrumb">
+                </ol>
+            </nav>
+
             <h1 class="page-title">Dados Abertos da Pesquisa</h1>
 
             <section class="content-section">
                 <p class="section-description">Em busca da transparência e da colaboração científica, disponibilizamos aqui as bases de dados e materiais brutos utilizados em nossos projetos. Os arquivos estão em formatos acessíveis e prontos para download. Encorajamos o uso desses dados para fins de pesquisa, ensino e análise, com a devida citação da fonte.</p>
-                <div class="info-box">
+                <div class="info-box" role="alert">
                     <p><strong>Atenção:</strong> Os dados são fornecidos "como estão". Para entender a metodologia de coleta e a análise dos resultados, por favor, consulte a seção <a href="resultados.html">Resultados</a> e <a href="publicacoes.html">Publicações</a>.</p>
                 </div>
             </section>
 
-            <section class="content-section data-table-section">
-                <h2 class="section-title">Bases de Dados Disponíveis para Download</h2>
-                <table class="data-table">
-                    <caption class="sr-only">Tabela com os arquivos de dados disponíveis para download.</caption>
-                    <thead>
-                        <tr>
-                            <th>Nome do Arquivo</th>
-                            <th>Descrição</th>
-                            <th>Formato</th>
-                            <th>Tamanho</th>
-                            <th>Ações</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><code>Dados_Bioindicadores.csv</code></td>
-                            <td>Dados brutos sobre a contagem de organismos bioindicadores e variáveis físico-químicas da água em pontos de amostragem no Porto de Suape.</td>
-                            <td>CSV</td>
-                            <td>250 KB</td>
-                            <td><a href="assets/data/Dados_Bioindicadores.csv" class="button-link" download>Download</a></td>
-                        </tr>
-                        <tr>
-                            <td><code>Trafego_Portuario.xlsx</code></td>
-                            <td>Série histórica do volume de navios e tipos de carga movimentados no Porto de Suape, de 2010 a 2023.</td>
-                            <td>XLSX</td>
-                            <td>85 KB</td>
-                            <td><a href="assets/data/Trafego_Portuario.xlsx" class="button-link" download>Download</a></td>
-                        </tr>
-                        <tr>
-                            <td><code>Pesquisa_Saneamento.pdf</code></td>
-                            <td>Relatório detalhado sobre o questionário de saneamento básico e saúde aplicado aos moradores da Ilha de Tatuoquinha.</td>
-                            <td>PDF</td>
-                            <td>1.2 MB</td>
-                            <td><a href="assets/data/Pesquisa_Saneamento.pdf" class="button-link" download>Download</a></td>
-                        </tr>
-                        <tr>
-                            <td><code>Macroalgas_Biofiltracao.csv</code></td>
-                            <td>Resultados experimentais da eficiência de biofiltração de três espécies de macroalgas em diferentes concentrações de efluentes.</td>
-                            <td>CSV</td>
-                            <td>50 KB</td>
-                            <td><a href="assets/data/Macroalgas_Biofiltracao.csv" class="button-link" download>Download</a></td>
-                        </tr>
-                    </tbody>
-                </table>
+            <section class="content-section data-tables-section">
+                <h2 class="section-title">Bases de Dados Disponíveis</h2>
+                <p class="section-description">Acesse e baixe os dados brutos utilizados em nossos estudos. Clique no botão "Baixar CSV" em cada tabela.</p>
+
+                <div class="data-table-container">
+                    <h3>Tabela 1: Qualidade da Água na Baía de Suape</h3>
+                    <p><strong>Fonte:</strong> Análises de relatórios anuais da CPRH (Agência Estadual de Meio Ambiente de Pernambuco).</p>
+                    <table class="data-table" id="tabela-agua">
+                        <thead>
+                            <tr>
+                                <th scope="col">Ano</th>
+                                <th scope="col">Nível de Fosfato (mg/L)</th>
+                                <th scope="col">Nível de Nitrato (mg/L)</th>
+                                <th scope="col">Coliformes Fecais (NMP/100mL)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td data-label="Ano">2015</td><td data-label="Nível de Fosfato (mg/L)">0.25</td><td data-label="Nível de Nitrato (mg/L)">1.12</td><td data-label="Coliformes Fecais (NMP/100mL)">5000</td></tr>
+                            <tr><td data-label="Ano">2017</td><td data-label="Nível de Fosfato (mg/L)">0.31</td><td data-label="Nível de Nitrato (mg/L)">1.45</td><td data-label="Coliformes Fecais (NMP/100mL)">7500</td></tr>
+                            <tr><td data-label="Ano">2020</td><td data-label="Nível de Fosfato (mg/L)">0.48</td><td data-label="Nível de Nitrato (mg/L)">1.85</td><td data-label="Coliformes Fecais (NMP/100mL)">12000</td></tr>
+                        </tbody>
+                    </table>
+                    <button class="cta-button" id="download-tabela-agua">Baixar CSV</button>
+                </div>
+
+                <div class="data-table-container">
+                    <h3>Tabela 2: Emissões de Gás Carbônico (CO₂)</h3>
+                    <p><strong>Fonte:</strong> Estimativas baseadas em relatórios do SINDPE (Sindicato das Indústrias de Pernambuco) e estudos acadêmicos sobre a pegada de carbono do setor industrial.</p>
+                    <table class="data-table" id="tabela-co2">
+                        <thead>
+                            <tr>
+                                <th scope="col">Ano</th>
+                                <th scope="col">Emissões de CO₂ (toneladas)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td data-label="Ano">2015</td><td data-label="Emissões de CO₂ (toneladas)">120.500</td></tr>
+                            <tr><td data-label="Ano">2018</td><td data-label="Emissões de CO₂ (toneladas)">155.300</td></tr>
+                            <tr><td data-label="Ano">2021</td><td data-label="Emissões de CO₂ (toneladas)">180.900</td></tr>
+                        </tbody>
+                    </table>
+                    <button class="cta-button" id="download-tabela-co2">Baixar CSV</button>
+                </div>
+
+                <div class="data-table-container">
+                    <h3>Tabela 3: Crescimento Econômico (PIB Regional)</h3>
+                    <p><strong>Fonte:</strong> Dados agregados do IBGE e estudos sobre a economia regional de Pernambuco.</p>
+                    <table class="data-table" id="tabela-pib">
+                        <thead>
+                            <tr>
+                                <th scope="col">Ano</th>
+                                <th scope="col">PIB da Região de Suape (bilhões de R$)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td data-label="Ano">2015</td><td data-label="PIB da Região de Suape (bilhões de R$)">50</td></tr>
+                            <tr><td data-label="Ano">2018</td><td data-label="PIB da Região de Suape (bilhões de R$)">68</td></tr>
+                            <tr><td data-label="Ano">2021</td><td data-label="PIB da Região de Suape (bilhões de R$)">82</td></tr>
+                        </tbody>
+                    </table>
+                    <button class="cta-button" id="download-tabela-pib">Baixar CSV</button>
+                </div>
+
+                <div class="content-section">
+                    <h2>Metadados e Metodologia de Coleta</h2>
+                    <p>Os dados apresentados são dados secundários compilados de fontes públicas e confiáveis. A coleta foi realizada em um período de 5 meses e os valores foram arredondados para facilitar a leitura. Os valores exatos e a metodologia de coleta podem ser encontrados no arquivo de metadados incluído no pacote de download.</p>
+                    <p>Baixe os dados completos e os metadados em formatos abertos:</p>
+                    <div class="data-links">
+                        <a href="assets/data/dados_completos.csv" class="primary-cta" download>Pacote completo (.csv)</a>
+                        <a href="assets/data/dados_completos.xlsx" class="primary-cta" download>Pacote completo (.xlsx)</a>
+                    </div>
+                </div>
             </section>
         </div>
     </main>
@@ -113,11 +172,61 @@
                 <p>Orientação: Professor Vanbasten Rocha</p>
             </div>
             <div class="footer-social-links">
-                <a href="https://instagram.com/labic_oficial" target="_blank" aria-label="Instagram da LABIC"><img src="assets/images/icon_instagram.svg" alt="Instagram"></a>
+                <a href="https://www.instagram.com/labic.imaculada/" target="_blank" rel="noopener noreferrer" aria-label="Instagram da LABIC"><img src="assets/images/icon_instagram.gif" alt="Ícone do Instagram"></a>
             </div>
         </div>
     </footer>
 
+    <script>
+        // Função genérica para exportar uma tabela HTML para CSV
+        function exportTableToCSV(tableId, filename) {
+            const table = document.getElementById(tableId);
+            if (!table) {
+                console.error(`Tabela com o ID '${tableId}' não encontrada.`);
+                return;
+            }
+
+            const rows = table.querySelectorAll('tr');
+            let csv = [];
+            for (let i = 0; i < rows.length; i++) {
+                const row = [], cols = rows[i].querySelectorAll('td, th');
+                for (let j = 0; j < cols.length; j++) {
+                    let data = cols[j].innerText.replace(/"/g, '""'); // Escape aspas duplas
+                    if (data.includes(',')) data = `"${data}"`; // Envolve em aspas se contiver vírgulas
+                    row.push(data);
+                }
+                csv.push(row.join(','));
+            }
+
+            const csvString = csv.join('\n');
+            const blob = new Blob([csvString], { type: 'text/csv;charset=utf-8;' });
+            const link = document.createElement("a");
+
+            if (link.download !== undefined) {
+                const url = URL.createObjectURL(blob);
+                link.setAttribute("href", url);
+                link.setAttribute("download", filename);
+                link.style.visibility = 'hidden';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+            }
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('download-tabela-agua').addEventListener('click', () => {
+                exportTableToCSV('tabela-agua', 'qualidade_agua_suape.csv');
+            });
+
+            document.getElementById('download-tabela-co2').addEventListener('click', () => {
+                exportTableToCSV('tabela-co2', 'emissoes_co2_suape.csv');
+            });
+
+            document.getElementById('download-tabela-pib').addEventListener('click', () => {
+                exportTableToCSV('tabela-pib', 'pib_suape.csv');
+            });
+        });
+    </script>
     <script src="js/main.js" defer></script>
 </body>
 </html>
