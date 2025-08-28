@@ -1,0 +1,59 @@
+/* src/index.css */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 1. Importação de Fontes e Configuração de Variáveis (customizadas) */
+/* As fontes são importadas no CSS. As cores e espaçamentos serão usados
+   diretamente nas classes do Tailwind. */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap');
+
+/* O Tailwind já oferece um bom reset. As variáveis CSS personalizadas
+   são úteis para cores e outros valores que podem ser alterados
+   dinamicamente, como no modo escuro. */
+:root {
+  /* Paleta de Cores: Natureza Digital */
+  --primary-color: #001f3f;
+  --secondary-color: #e6f2ff;
+  --tertiary-color: #335d88;
+  --accent-color-blue: #0077b6;
+  --accent-color-green: #38a3a5;
+  --text-color: #333;
+  --text-color-light: #f1f8e9;
+  --background-light: #f9fcff;
+  --background-dark: #0a1128;
+  --border-color: #ddd;
+}
+
+/* 2. Base e Tipografia Global */
+html {
+  /* Habilita a rolagem suave em todo o documento */
+  scroll-behavior: smooth;
+}
+
+body {
+  /* Define as fontes globais e a cor de fundo */
+  font-family: 'Roboto', sans-serif;
+  color: var(--text-color);
+  background-color: var(--secondary-color);
+  overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  /* Define a fonte dos títulos */
+  font-family: 'Playfair Display', serif;
+  color: var(--primary-color);
+}
+
+/* 3. Estilos Específicos para Dark Mode */
+/* Esta é a maneira de usar variáveis CSS para criar um tema dinâmico. */
+body.dark-mode {
+  --text-color: #f1f8e9;
+  --text-color-light: #333;
+  --background-light: #1c273a;
+  --background-dark: #0a1128;
+  --primary-color: #1a293b;
+  --secondary-color: #0d162a;
+  --tertiary-color: #557297;
+  --border-color: #444;
+}
