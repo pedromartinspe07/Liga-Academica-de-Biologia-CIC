@@ -1,36 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
 
     // ===========================================
-    // 1. Controle do Menu Responsivo (Hambúrguer)
-    // ===========================================
-    const navbarToggler = document.querySelector('.navbar-toggler');
-    const navbarCollapse = document.querySelector('.navbar-collapse');
-    const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-
-    if (navbarToggler && navbarCollapse) {
-        // Função para alternar o estado do menu
-        const toggleMenu = () => {
-            const isExpanded = navbarToggler.getAttribute('aria-expanded') === 'true';
-            navbarToggler.setAttribute('aria-expanded', !isExpanded);
-            navbarCollapse.classList.toggle('show');
-        };
-
-        // Abre/fecha o menu ao clicar no botão
-        navbarToggler.addEventListener('click', toggleMenu);
-
-        // Fecha o menu quando um link é clicado
-        navLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                // Checa se o menu está aberto para telas menores antes de fechar
-                if (window.innerWidth <= 992) {
-                    toggleMenu();
-                }
-            });
-        });
-    }
-
-    // ===========================================
-    // 2. Animação de Entrada de Seções (Fade-in)
+    // 1. Animação de Entrada de Seções (Fade-in)
     // ===========================================
     const sections = document.querySelectorAll('.content-section, .chart-container, .publication-gallery, .profile-card');
 
