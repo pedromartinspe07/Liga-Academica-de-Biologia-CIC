@@ -2,15 +2,15 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import App from './App'; // Importa o componente App.js que criamos
+// Importa o componente principal da sua aplicação.
+import App from './App'; 
+// Importa o arquivo de estilos global do Tailwind CSS.
+import './index.css'; 
 
-// Opcionalmente, você pode importar um arquivo CSS para estilos globais
-// import './index.css'; 
-
-// Cria a raiz do React no elemento com id="root"
+// Cria a raiz do React no elemento HTML com id="root".
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    {/* Renderiza o seu componente principal, o App */}
+    {/* Renderiza o seu componente principal, o App, dentro do StrictMode. */}
     <App />
   </React.StrictMode>,
 );
