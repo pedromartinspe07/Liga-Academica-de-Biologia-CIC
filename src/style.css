@@ -1,304 +1,637 @@
-/*
- * Arquivo de estilo principal para um projeto usando Tailwind CSS.
- * Este arquivo funciona como o "input.css" que o Tailwind processa
- * para gerar o arquivo final "output.css".
- *
- * Ele foi corrigido e melhorado para seguir as melhores práticas,
- * utilizando propriedades CSS tradicionais para garantir a compatibilidade
- * total com a sua versão do Tailwind CLI.
- *
- * Para o funcionamento ideal, as variáveis de design (`--primary-color`, etc.)
- * deveriam ser configuradas no arquivo `tailwind.config.js`.
- * No entanto, para fins de demonstração e para manter a solução
- * em um único arquivo, elas são mantidas aqui.
- */
-
-/* Diretivas padrão do Tailwind para injetar os estilos. */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* src/style.css */
 
 /*
- * 1. Estilos Base e Propriedades Customizadas (Variáveis)
- * Estas variáveis podem ser usadas como classes do tipo: `bg-[var(--primary-color)]`.
- * Para uma integração mais profunda, elas devem ser movidas para
- * o `tailwind.config.js` estendendo o tema.
- */
-@layer base {
-  :root {
-    /* Paleta de Cores: Natureza Digital (Traduzido de Hex para HSL ou Oklch para melhor acessibilidade) */
-    --primary-color: oklch(10% 0.1 240); /* Azul Marinho Profundo */
-    --secondary-color: oklch(95% 0.05 240); /* Azul Claro Sereno */
-    --tertiary-color: oklch(45% 0.1 240); /* Azul Cinzento */
-    --accent-color-blue: oklch(50% 0.2 260); /* Azul Vivo do Oceano */
-    --accent-color-green: oklch(65% 0.15 150); /* Verde-Água da Natureza */
-    --accent-color-red: oklch(55% 0.2 25); /* Tom de Destaque para Alertas/Erros */
-    --text-color: oklch(20% 0.05 240); /* Cinza Escuro para Leitura */
-    --text-color-light: oklch(98% 0.02 240); /* Cor Clara para Fundo Escuro */
-    --background-light: oklch(98% 0.01 240); /* Fundo de Seções */
-    --background-dark: oklch(8% 0.05 240); /* Fundo Escuro para Seções Especiais */
-    --border-color: oklch(85% 0.01 240); /* Cor de Borda Padrão */
+  --------------------
+  ESTILOS GLOBAIS
+  --------------------
+*/
 
-    /* Sombras e Bordas */
-    --shadow-sm: 0 2px 5px rgba(0, 0, 0, 0.08);
-    --shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
-    --shadow-lg: 0 12px 30px rgba(0, 0, 0, 0.2);
-    --border-radius-soft: 12px;
-    --border-radius-circle: 50%;
+/* Variáveis CSS para a paleta de cores e fontes */
+:root {
+  --cor-principal: #0b1a26; /* Azul marinho escuro */
+  --cor-secundaria: #182e44; /* Azul escuro, para seções e cards */
+  --cor-destaque: #3f88c5; /* Azul vibrante, para elementos interativos */
+  --cor-fundo-claro: #f0f4f8; /* Cinza claro, quase branco */
+  --cor-fundo-escuro: #0a0a0a; /* Preto */
+  --cor-texto-claro: #fefefe; /* Branco para texto em fundo escuro */
+  --cor-texto-escuro: #212529; /* Cinza escuro para texto em fundo claro */
 
-    /* Transições padronizadas */
-    --transition-fast: 0.2s ease-in-out;
-    --transition-normal: 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    --transition-slow: 0.8s ease-out;
-  }
+  --fonte-principal: 'Inter', sans-serif;
+  --fonte-serif: 'Georgia', serif;
+}
 
-  /* Reset básico e tipografia */
-  *,
-  *::before,
-  *::after {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-  }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-  html {
-    scroll-behavior: smooth;
-  }
+html {
+  scroll-behavior: smooth;
+}
 
-  body {
-    font-family: 'Roboto', sans-serif;
-    line-height: 1.625;
-    color: var(--text-color);
-    background-color: var(--secondary-color);
-    overflow-x: hidden;
-    font-size: 1rem;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-  }
+body {
+  font-family: var(--fonte-principal);
+  line-height: 1.6;
+  background-color: var(--cor-fundo-claro);
+  color: var(--cor-texto-escuro);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 
-  /* Títulos e Parágrafos */
-  h1, h2, h3, h4, h5, h6 {
-    color: var(--primary-color);
-    margin-bottom: 1.5rem;
-    line-height: 1.25;
-    font-family: 'Playfair Display', serif;
-  }
-  
-  h1 {
-    text-align: center;
-    font-weight: bold;
-    font-size: clamp(2.5rem, 6vw, 4rem);
-  }
+h1, h2, h3, h4 {
+  font-family: var(--fonte-serif);
+  color: var(--cor-principal);
+  font-weight: 700;
+  margin-bottom: 0.5em;
+}
 
-  h2 {
-    margin-top: 2.5rem;
-    font-weight: 600;
-    font-size: clamp(1.8rem, 4vw, 2.5rem);
-  }
+h1 { font-size: clamp(2.5rem, 5vw, 4rem); }
+h2 { font-size: clamp(1.8rem, 4vw, 2.5rem); }
+h3 { font-size: clamp(1.2rem, 3vw, 1.8rem); }
 
-  h3 {
-    font-weight: 500;
-    font-size: clamp(1.4rem, 3vw, 2rem);
-  }
-  
-  p {
-    margin-bottom: 1.5rem;
-  }
-  
-  ul, ol {
-    margin-bottom: 1.5rem;
-    padding-left: 1.5rem;
-  }
-  
-  a {
-    color: var(--accent-color-blue);
-    text-decoration: none;
-    transition: color var(--transition-fast) ease-in-out;
-  }
-  
-  a:hover {
-    color: var(--accent-color-green);
-  }
+p {
+  margin-bottom: 1em;
+  font-size: 1rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2em;
 }
 
 /*
- * 2. Componentes de UI e Layout (Recriados com CSS puro)
- * Estas classes podem ser aplicadas ao seu HTML como se fossem componentes
- * customizados (ex: `<div class="content-section">...</div>`).
- */
-@layer components {
-  /* Seção de Conteúdo Geral */
-  .content-section {
-    background-color: var(--background-light);
-    padding: 2rem;
-    border-radius: var(--border-radius-soft);
-    box-shadow: var(--shadow-xl);
-    margin-bottom: 3rem;
-    opacity: 0;
-    transform: translateY(1.25rem);
-    transition: all var(--transition-slow) ease-out;
+  --------------------
+  ESTILOS GERAIS DE COMPONENTES
+  --------------------
+*/
+
+.main-content {
+  padding-top: 5rem;
+  background-color: var(--cor-fundo-claro);
+  min-height: 100vh;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  color: var(--cor-principal);
+}
+
+.section-header h1 {
+  border-bottom: 3px solid var(--cor-destaque);
+  display: inline-block;
+  padding-bottom: 0.2em;
+}
+
+.item-card {
+  background-color: var(--cor-texto-claro);
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.08);
+  padding: 2.5rem;
+  margin-bottom: 2rem;
+  border: 1px solid #e0e0e0;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.item-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.item-card h2 {
+  color: var(--cor-secundaria);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+/*
+  --------------------
+  NAVBAR
+  --------------------
+*/
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: var(--cor-fundo-escuro);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.navbar-logo a {
+  font-weight: 900;
+  font-size: 1.8rem;
+  color: var(--cor-destaque);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.navbar-links a {
+  color: var(--cor-texto-claro);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: var(--cor-destaque);
+  transform: translateY(-2px);
+}
+
+/*
+  --------------------
+  PÁGINAS DE CONTEÚDO (GENÉRICAS)
+  --------------------
+*/
+
+.content-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  background-color: var(--cor-fundo-claro);
+  color: var(--cor-texto-escuro);
+}
+
+.content-container .section-header {
+  margin-bottom: 4rem;
+}
+
+.intro-text {
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  text-align: center;
+  font-size: 1.1rem;
+  color: #555;
+}
+
+/* Publications, Dados, Glossario */
+.publications-container,
+.data-container,
+.glossary-container {
+  @extend .content-container;
+}
+
+/* Estilos para os itens das páginas */
+.publication-item,
+.data-item,
+.glossary-item {
+  @extend .item-card;
+}
+
+/* Específico do glossário */
+.glossary-item h3 {
+  color: var(--cor-secundaria);
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/*
+  --------------------
+  PÁGINA INICIAL (HOME PAGE)
+  --------------------
+*/
+
+.homepage-container {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--cor-principal);
+  color: var(--cor-texto-claro);
+  padding: 0;
+}
+
+.homepage-intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  width: 100%;
+  padding: 4rem 2rem;
+  gap: 4rem;
+}
+
+.homepage-content {
+  flex: 1;
+  text-align: left;
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.homepage-content h1 {
+  font-size: clamp(3rem, 6vw, 5rem);
+  color: var(--cor-destaque);
+  line-height: 1.2;
+}
+
+.homepage-content p {
+  font-size: 1.1rem;
+  color: var(--cor-texto-claro);
+  max-width: 600px;
+  margin-bottom: 2rem;
+}
+
+.homepage-cta {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: flex-start;
+}
+
+.three-js-canvas {
+  flex-shrink: 0;
+  width: 500px;
+  height: 500px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* --- ESTILOS PARA NOVAS SEÇÕES DA HOME PAGE --- */
+
+.homepage-section {
+  width: 100%;
+  padding: 6rem 2rem;
+  text-align: center;
+}
+
+.homepage-section.two {
+  background-color: var(--cor-fundo-escuro);
+  color: var(--cor-texto-claro);
+}
+
+.homepage-section.two h2 {
+  color: var(--cor-destaque);
+}
+
+.homepage-section.three {
+  background-color: var(--cor-fundo-claro);
+  color: var(--cor-texto-escuro);
+}
+
+.stats-container {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.stat-card {
+  background-color: var(--cor-secundaria);
+  color: var(--cor-texto-claro);
+  border-radius: 10px;
+  padding: 2.5rem 2rem;
+  width: 250px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.stat-card h3 {
+  font-size: 3.5rem;
+  margin-bottom: 0.2em;
+  color: var(--cor-destaque);
+}
+
+.stat-card p {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/*
+  --------------------
+  BOTÕES E COMPONENTES GERAIS
+  --------------------
+*/
+
+.button {
+  display: inline-block;
+  padding: 0.9rem 2.2rem;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.button.primary {
+  background-color: var(--cor-destaque);
+  color: var(--cor-fundo-escuro);
+}
+
+.button.primary:hover {
+  background-color: var(--cor-principal);
+  color: var(--cor-destaque);
+  transform: translateY(-3px);
+  border: 2px solid var(--cor-destaque);
+}
+
+.button.secondary {
+  background-color: transparent;
+  color: var(--cor-destaque);
+  border: 2px solid var(--cor-destaque);
+}
+
+.button.secondary:hover {
+  background-color: var(--cor-destaque);
+  color: var(--cor-fundo-escuro);
+  transform: translateY(-3px);
+}
+
+.card {
+  background-color: var(--cor-fundo-claro);
+  color: var(--cor-texto-escuro);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/*
+  --------------------
+  PÁGINAS DE CONTEÚDO
+  --------------------
+*/
+
+.projects-container,
+.about-container,
+.contact-container,
+.blog-container,
+.members-container {
+  padding: 3rem 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.projects-container h2,
+.about-container h2,
+.contact-container h2,
+.blog-container h2,
+.members-container h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  border-bottom: 3px solid var(--cor-destaque);
+  display: inline-block;
+  padding-bottom: 0.2em;
+}
+
+.projects-container {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.project-card h3 {
+  color: var(--cor-secundaria);
+}
+
+.project-members ul {
+  list-style: none;
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 0.5rem;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.contact-form label {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: var(--cor-principal);
+}
+
+.contact-form input,
+.contact-form textarea {
+  padding: 0.8rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 0.5rem;
+}
+
+.contact-form button {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background-color: var(--cor-principal);
+  color: var(--cor-texto-claro);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: var(--cor-secundaria);
+}
+
+.blog-posts-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.blog-posts-grid .card a {
+  color: var(--cor-secundaria);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.members-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  text-align: center;
+}
+
+.advisor-card {
+  text-align: center;
+  padding: 2rem;
+  background-color: var(--cor-principal);
+  color: var(--cor-texto-claro);
+  border-radius: 10px;
+  max-width: 400px;
+  margin: 2rem auto;
+}
+
+.advisor-card h3 {
+  color: var(--cor-destaque);
+}
+
+.advisor-card img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid var(--cor-destaque);
+  margin-bottom: 1rem;
+}
+
+/*
+  --------------------
+  PÁGINAS DE CONTEÚDO GENÉRICO
+  (Referencial, Dados, Glossário, etc)
+  --------------------
+*/
+
+.referencial-container,
+.data-container,
+.glossary-container,
+.publications-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+}
+
+.referencial-container h1,
+.data-container h1,
+.glossary-container h1,
+.publications-container h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.8rem;
+  color: var(--cor-principal);
+  border-bottom: 3px solid var(--cor-destaque);
+  display: inline-block;
+  padding-bottom: 0.2em;
+}
+
+.referencial-item,
+.data-item,
+.publication-item,
+.glossary-item {
+  background-color: var(--cor-fundo-claro);
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 2.5rem;
+  margin-bottom: 3rem;
+  border: 1px solid #e0e0e0;
+}
+
+.referencial-item h2,
+.data-item h2,
+.publication-item h2,
+.glossary-item h2 {
+  color: var(--cor-secundaria);
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+}
+
+.referencial-item p,
+.data-item p,
+.publication-item p,
+.glossary-item p {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--cor-texto-escuro);
+}
+
+.referencias {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 1.5rem;
+  padding-left: 1rem;
+  border-left: 3px solid var(--cor-destaque);
+}
+
+.referencias b {
+  color: var(--cor-principal);
+}
+
+/*
+  --------------------
+  RESPONSIVIDADE
+  --------------------
+*/
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 1rem;
+    align-items: flex-start;
   }
-  
-  .content-section.visible {
-    opacity: 1;
-    transform: translateY(0);
+
+  .navbar-links {
+    margin-top: 1rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: flex-start;
   }
-  
-  /* Botões de Ação (CTA) */
-  .cta-button {
-    display: inline-block;
-    padding: 1.25rem 2.5rem;
-    text-decoration: none;
-    border-radius: 9999px;
-    font-weight: 600;
-    letter-spacing: 0.05em;
-    transition: all var(--transition-normal) ease-in-out;
-    text-transform: uppercase;
-    border: none;
-    cursor: pointer;
-    outline: none;
+
+  .homepage-intro {
+    flex-direction: column;
+    padding-top: 6rem;
+    padding-bottom: 2rem;
+    gap: 2rem;
+  }
+
+  .homepage-content {
     text-align: center;
   }
-  
-  .primary-cta {
-    background-color: var(--accent-color-green);
-    color: var(--background-dark);
-  }
-  
-  .primary-cta:is(:hover, :focus) {
-    background-color: var(--accent-color-blue);
-    transform: translateY(-0.25rem) scale(1.05);
-    box-shadow: var(--shadow-sm);
-  }
-  
-  .secondary-cta {
-    background-color: transparent;
-    border: 2px solid var(--accent-color-green);
-    color: var(--accent-color-green);
-  }
-  
-  .secondary-cta:is(:hover, :focus) {
-    background-color: var(--accent-color-green);
-    color: var(--background-dark);
-    border-color: var(--background-dark);
-    transform: translateY(-0.125rem);
-  }
-  
-  /* Agrupamento de botões CTA */
-  .cta-group {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+
+  .homepage-cta {
     justify-content: center;
-    gap: 1.5rem;
   }
-  
-  /* Cards (Destaques, Equipe) */
-  .card {
-    background-color: var(--background-light);
-    border-radius: var(--border-radius-soft);
-    box-shadow: var(--shadow-xl);
-    padding: 2rem;
-    display: flex;
+
+  .three-js-canvas {
+    width: 100%;
+    height: 300px;
+  }
+
+  .stats-container {
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    transition: all var(--transition-normal) ease-in-out;
-    will-change: transform, box-shadow;
-  }
-  
-  .card:is(:hover, :focus-within) {
-    transform: translateY(-0.5rem);
-    box-shadow: var(--shadow-2xl);
-  }
-  
-  .card img.icon {
-    width: 5rem;
-    height: 5rem;
-    margin-bottom: 1.5rem;
-    border-radius: var(--border-radius-circle);
-    border: 4px solid var(--accent-color-green);
-    padding: 0.375rem;
-  }
-  
-  /* Formulário de Contato */
-  .form-group {
-    margin-bottom: 2.5rem;
-    text-align: left;
-  }
-  
-  .form-group label {
-    display: block;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    color: var(--tertiary-color);
-  }
-  
-  .form-group input,
-  .form-group textarea {
-    width: 100%;
-    padding: 1rem;
-    border: 1px solid var(--border-color);
-    border-radius: 0.5rem;
-    font-size: 1rem;
-    background-color: white;
-    transition: all var(--transition-normal) ease-in-out;
-    will-change: border-color, box-shadow;
-  }
-  
-  .form-group input:focus,
-  .form-group textarea:focus {
-    border-color: var(--accent-color-green);
-    outline: none;
-    box-shadow: 0 0 0 2px rgba(var(--accent-color-green), 0.5);
-  }
-  
-  .form-status {
-    margin-top: 1.5rem;
-    font-weight: bold;
-    transition: color var(--transition-fast) ease-in-out;
-  }
-  
-  .form-status.success {
-    color: var(--accent-color-green);
-  }
-  
-  .form-status.error {
-    color: var(--accent-color-red);
-  }
-}
-
-/*
- * 3. Camada de Utilitários e Estilos de Tema (dark-mode)
- * Estilos que modificam o tema geral da página, incluindo o modo escuro.
- */
-@layer utilities {
-  /* Estilos para o Dark Mode */
-  .dark-mode {
-    --text-color: oklch(98% 0.02 240);
-    --text-color-light: oklch(20% 0.05 240);
-    --background-light: oklch(15% 0.05 240);
-    --background-dark: oklch(8% 0.05 240);
-    --primary-color: oklch(18% 0.05 240);
-    --secondary-color: oklch(5% 0.05 240);
-    --tertiary-color: oklch(55% 0.1 240);
-    --border-color: oklch(25% 0.05 240);
   }
 
-  .dark-mode .nav-link:is(:hover, :focus, .active) {
-    color: var(--accent-color-green);
-  }
-  
-  .dark-mode .content-section, .dark-mode .card, .dark-mode .auth-form {
-    background-color: var(--background-light);
-    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.05);
-  }
-  
-  .dark-mode h1, .dark-mode h2, .dark-mode h3, .dark-mode h4, .dark-mode h5, .dark-mode h6, .dark-mode .subtitle, .dark-mode a {
-    color: var(--text-color);
+  .stat-card {
+    width: 90%;
   }
 
-  .dark-mode body {
-    background-color: var(--secondary-color);
+  .projects-container,
+  .blog-posts-grid,
+  .members-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .content-container,
+  .referencial-container,
+  .data-container,
+  .glossary-container,
+  .publications-container {
+    padding: 2rem 1rem;
   }
 }
