@@ -39,7 +39,10 @@ const ProjectPage = () => {
                                     <li>Arthur Lemos</li>
                                     <li>Marília Laura</li>
                                     <li>Lyvia Beatriz</li>
-                                    {/* ... outros membros */}
+                                    <li>Pedro Martins</li>
+                                    <li>Maria Letícia</li>
+                                    <li>Maria Eduarda</li>
+                                    <li>Taísa Paiva</li>
                                 </ul>
                             </div>
                         </div>
@@ -61,16 +64,75 @@ const ProjectPage = () => {
                             <div className="team-section">
                                 <h3>Membros da Equipe</h3>
                                 <ul className="team-list">
-                                    <li>Maria Eduarda Gaspar</li>
-                                    <li>Mayra</li>
-                                    {/* ... outros membros */}
+                                <li>Maria Eduarda Gaspar</li>
+                                <li>Mayra</li>
+                                <li>Maria Clara</li>
+                                <li>Ana Beatriz do Canto</li>
+                                <li>Yasmin Melo</li>
+                                <li>Julia Beatriz</li>
+                                <li>Julie Azevedo</li>
                                 </ul>
                             </div>
                         </div>
                     </FadeInOnScroll>
                 </section>
 
-                {/* Adicione aqui as outras seções do seu projeto, seguindo o mesmo padrão */}
+
+                <section className="content-section project-card" id="rotas">
+                    <FadeInOnScroll>
+                        <div className="project-header">
+                            <img src={project2bHero} alt="Ilustração de um tubarão nadando em águas costeiras" className="project-image" />
+                            <div className="project-info">
+                                <span className="project-year">Grupo 2º Ano B</span>
+                                <h2 className="project-title">Impactos do Saneamento Básico em Tatuoquinha</h2>
+                            </div>
+                        </div>
+                        <div className="project-details">
+                            <p className="project-description">Focado na saúde pública e ambiental, este projeto estuda como a falta de saneamento básico na Ilha de Tatuoquinha, área próxima a Suape, afeta a saúde dos moradores e o meio ambiente local. O estudo visa propor soluções e conscientizar sobre a importância da infraestrutura sanitária para a qualidade de vida e a preservação do ecossistema.</p>
+                            <a href="#referencial" className="cta-button">Ver Referencial Teórico →</a>
+                            <div className="team-section">
+                                <h3>Membros da Equipe</h3>
+                                <ul className="team-list">
+                                <li>Giovana Silveira</li>
+                                <li>Júlia Silveira</li>
+                                <li>Eutália Duarte</li>
+                                <li>Fernando José</li>
+                                <li>Adélia Amorim</li>
+                                <li>Pedro Miguel</li>
+                                <li>Maria Vitória Galamba</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </FadeInOnScroll>
+                </section>
+
+                <section className="content-section project-card" id="rotas">
+                    <FadeInOnScroll>
+                        <div className="project-header">
+                            <img src={project1aHero} alt="Ilustração de um tubarão nadando em águas costeiras" className="project-image" />
+                            <div className="project-info">
+                                <span className="project-year">Grupo 1º Ano</span>
+                                <h2 className="project-title">Biofiltração com Macroalgas</h2>
+                            </div>
+                        </div>
+                        <div className="project-details">
+                            <p className="project-description">Este grupo explora uma solução biológica e sustentável para o tratamento de efluentes industriais. A pesquisa avalia a eficiência de diferentes espécies de macroalgas na filtração de substâncias poluentes encontradas em áreas portuárias, propondo uma alternativa natural para a remediação ambiental.</p>
+                            <a href="#referencial" className="cta-button">Ver Referencial Teórico →</a>
+                            <div className="team-section">
+                                <h3>Membros da Equipe</h3>
+                                <ul className="team-list">
+                                <li>Flora Nascimento</li>
+                                <li>Gabriele Machado</li>
+                                <li>Gabrielly Marinho</li>
+                                <li>Alícia Vitória</li>
+                                <li>Heitor</li>
+                                <li>Bruno</li>
+                                <li>Maria Lúcia</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </FadeInOnScroll>
+                </section>
 
                 <section className="content-section final-cta-section">
                     <FadeInOnScroll>
