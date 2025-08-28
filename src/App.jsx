@@ -16,6 +16,9 @@ import ResultadosPage from './components/ResultsPage';
 import ContactPage from './components/ContactPage';
 import Footer from './components/Footer'; // Agora, o Footer é um componente separado.
 
+// Importa o arquivo CSS de saída gerado pelo Tailwind CSS e outras folhas de estilo.
+// Nota: O arquivo gerado pelo build é o que deve ser importado.
+import './output.css'; 
 
 /**
  * Componente principal da aplicação.

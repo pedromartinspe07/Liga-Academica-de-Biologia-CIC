@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados da Pesquisa - LABIC | Liga Acadêmica de Biologia</title>
+    
+    <meta name="description" content="Apresentação dos principais resultados da pesquisa da LABIC através de gráficos interativos e análises. Veja as descobertas sobre bioindicadores, saneamento e biofiltração em Suape.">
+    <meta name="keywords" content="resultados, pesquisa, gráficos, dados, LABIC, bioindicadores, saneamento, biofiltração, tubarões, Porto de Suape">
+    <meta name="author" content="LABIC - Colégio Imaculada da Conceição">
+
+    <meta property="og:title" content="Resultados da Pesquisa - LABIC">
+    <meta property="og:description" content="Transformando dados em descobertas: uma jornada visual pelos resultados dos projetos da LABIC.">
+    <meta property="og:image" content="https://seusite.com/assets/images/logo_labic_social.png">
+    <meta property="og:url" content="https://seusite.com/resultados.html">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    
+    <link rel="stylesheet" href="css/style.css">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    
+    </head>
+<body>
+
+    <header>
+        <nav class="navbar" role="navigation" aria-label="Menu Principal">
+            <div class="container-fluid">
+                <a class="navbar-logo" href="index.html">
+                    <img src="assets/images/logo_labic.png" alt="Ícone da Logo" height="40">
+                </a>
+
+                <button class="navbar-toggler" type="button" aria-controls="main-menu" aria-expanded="false" aria-label="Abrir menu de navegação">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+
+                <div class="navbar-collapse" id="main-menu">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="index.html">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="projeto.html">O Projeto</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="referencial.html">Referencial</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="resultados.html">Resultados</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="publicacoes.html">Publicações</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="dados.html">Dados</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="glossario.html">Glossário</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="sobre.html">Sobre</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contato.html">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <div class="container">
+            <nav aria-label="Breadcrumb" class="breadcrumb-nav">
+                <ol class="breadcrumb">
+                </ol>
+            </nav>
+
+            <h1 class="page-title">Resultados da Pesquisa</h1>
+            <p class="subtitle">Transformando dados em descobertas: uma jornada visual pela ciência.</p>
+
+            <section class="content-section">
+                <p>Nesta seção, apresentamos os resultados dos projetos da LABIC por meio de visualizações de dados claras e objetivas. Cada gráfico e infográfico é acompanhado por uma análise que explica as principais descobertas, conectando os dados com as conclusões de nossas pesquisas.</p>
+                <div class="info-box" role="alert">
+                    <p><strong>Quer ir além?</strong> Você pode baixar as bases de dados completas na página de <a href="dados.html">Dados</a> e explorar a metodologia na página de <a href="referencial.html">Referencial Teórico</a>.</p>
+                </div>
+            </section>
+            
+            <section class="content-section chart-section">
+                <h2 class="section-title">Grupo 3º Ano: Bioindicadores da Qualidade da Água</h2>
+                <figure class="chart-figure">
+                    <canvas id="bioindicadoresChart"></canvas>
+                    <figcaption class="chart-caption">
+                        <p><strong>Figura 1: Nível de Poluentes em Pontos Estratégicos.</strong></p>
+                        <p>Este gráfico de barras compara os níveis de poluentes em diferentes pontos de amostragem na área de estudo. O ponto "Ponto de Descarte" e "Canal Principal" mostram concentrações significativamente mais altas que a área de controle ("Praia de Calhetas"), indicando um forte impacto das atividades industriais na qualidade da água. Os dados corroboram a hipótese de que a poluição afeta diretamente a saúde das comunidades de bioindicadores.</p>
+                        <button id="download-bioindicadores" class="btn btn-primary btn-sm">Baixar dados</button>
+                    </figcaption>
+                </figure>
+            </section>
+
+            <section class="content-section chart-section">
+                <h2 class="section-title">Grupo 2º Ano A: Tubarões e Rotas</h2>
+                <figure class="chart-figure">
+                    <canvas id="sharksChart"></canvas>
+                    <figcaption class="chart-caption">
+                        <p><strong>Figura 2: Ocorrências de Tubarões por Mês.</strong></p>
+                        <p>Este gráfico de linha ilustra a tendência de ocorrências de tubarões na região metropolitana do Recife. O aumento nas ocorrências em determinados meses sugere possíveis relações com fatores sazonais ou de migração. Nossos dados abrem uma importante discussão sobre os impactos indiretos da atividade humana no comportamento da fauna marinha.</p>
+                        <button id="download-sharks" class="btn btn-primary btn-sm">Baixar dados</button>
+                    </figcaption>
+                </figure>
+            </section>
+
+            <section class="content-section chart-section">
+                <h2 class="section-title">Grupo 2º Ano B: Saneamento na Comunidade Local</h2>
+                <figure class="chart-figure">
+                    <canvas id="saneamentoChart"></canvas>
+                    <figcaption class="chart-caption">
+                        <p><strong>Figura 3: Situação de Saneamento na Comunidade.</strong></p>
+                        <p>Este gráfico de pizza apresenta a distribuição do saneamento na comunidade local, com uma ênfase nas residências com e sem esgoto tratado. A alta porcentagem de residências sem saneamento básico confirma a hipótese inicial do nosso projeto, reforçando a urgência de melhorias na infraestrutura local.</p>
+                        <button id="download-saneamento" class="btn btn-primary btn-sm">Baixar dados</button>
+                    </figcaption>
+                </figure>
+            </section>
+
+            <section class="content-section chart-section">
+                <h2 class="section-title">Grupo 1º Ano: Biofiltração com Macroalgas</h2>
+                <figure class="chart-figure">
+                    <canvas id="macroalgasChart"></canvas>
+                    <figcaption class="chart-caption">
+                        <p><strong>Figura 4: Eficiência de Remoção de Poluentes por Macroalgas.</strong></p>
+                        <p>Este gráfico de barras demonstra a capacidade de remoção de diferentes poluentes por macroalgas nativas. A alta eficiência de remoção indica o potencial da biofiltração como uma solução sustentável e de baixo custo para o tratamento de efluentes em áreas portuárias.</p>
+                        <button id="download-biofiltracao" class="btn btn-primary btn-sm">Baixar dados</button>
+                    </figcaption>
+                </figure>
+            </section>
+        </div>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-info">
+                <p>&copy; 2025 - LABIC | Liga Acadêmica de Biologia.</p>
+                <p>Orientação: Professor Vanbasten Rocha</p>
+            </div>
+            <div class="footer-social-links">
+                <a href="https://www.instagram.com/labic.imaculada/" target="_blank" rel="noopener noreferrer" aria-label="Instagram da LABIC"><img src="assets/images/icon_instagram.gif" alt="Ícone do Instagram"></a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js" defer></script>
+    <script src="js/chart.js" defer></script>
+    <script src="js/main.js" defer></script>
+</body>
+</html>

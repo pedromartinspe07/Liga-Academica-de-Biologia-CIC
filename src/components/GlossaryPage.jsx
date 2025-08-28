@@ -1,15 +1,30 @@
-import React, { useState } from 'react';
-import { LuMenu, LuX } from 'react-icons/lu';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { createRoot } from 'react-dom/client';
 
-// Define o componente principal App
-const App = () => {
+/**
+ * @file GlossaryPage.jsx
+ * @description Componente da página de glossário, com termos técnicos
+ * e navegação por letras, incluindo melhorias de design e funcionalidades.
+ */
+
+// Define o componente principal GlossarioPage
+const GlossaryPage = () => {
   // Estado para controlar a visibilidade do menu de navegação em dispositivos móveis
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   // Função para alternar o estado do menu
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+  
+  // Função para lidar com a rolagem suave para as seções
+  const handleScrollToSection = (id) => {
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+    // Fecha o menu após clicar em um item no mobile
+    setIsMenuOpen(false);
   };
 
   // Definição dos termos do glossário
@@ -62,30 +77,29 @@ const App = () => {
   };
 
   return (
-    <div className="bg-gray-50 min-h-screen font-[Roboto]">
+    <div className="bg-gray-50 min-h-screen font-inter">
       {/* Cabeçalho e barra de navegação */}
-      <header className="bg-white shadow-md">
+      <header className="bg-white shadow-md rounded-b-2xl">
         <nav className="container mx-auto px-4 py-4 flex items-center justify-between" role="navigation" aria-label="Menu Principal">
           {/* Logo */}
-          <a className="flex items-center" href="index.html">
-            <img src="https://placehold.co/40x40/E8E8E8/404040?text=LABIC" alt="Ícone da Logo" className="h-10" />
-            <span className="ml-2 text-xl font-bold text-gray-800 hidden md:block">LABIC</span>
+          <a className="flex items-center" href="#">
+            <span className="font-extrabold text-2xl text-blue-600">LABIC</span>
           </a>
 
           {/* Botão para abrir/fechar menu em mobile */}
           <button
-            className="md:hidden p-2 rounded-full text-gray-600 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-300"
+            className="md:hidden p-2 rounded-full text-gray-600 hover:bg-gray-200 focus:outline-none focus:ring-2 focus:ring-gray-300 transition-colors duration-200"
             type="button"
             onClick={toggleMenu}
             aria-controls="main-menu"
             aria-expanded={isMenuOpen}
             aria-label="Abrir menu de navegação"
           >
-            {isMenuOpen ? 
+            {isMenuOpen ?
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-              </svg> 
-              : 
+              </svg>
+              :
               <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
@@ -94,36 +108,22 @@ const App = () => {
 
           {/* Conteúdo do menu de navegação */}
           <div
-            className={`md:flex md:items-center w-full md:w-auto ${isMenuOpen ? 'block' : 'hidden'}`}
+            className={`absolute z-50 top-20 right-4 md:static md:flex md:items-center w-full md:w-auto ${isMenuOpen ? 'block bg-white p-6 rounded-lg shadow-xl' : 'hidden'}`}
             id="main-menu"
           >
-            <ul className="flex flex-col md:flex-row md:space-x-8 mt-4 md:mt-0 items-center w-full">
+            <ul className="flex flex-col md:flex-row md:space-x-8 mt-4 md:mt-0 items-start md:items-center w-full">
+              {/* Simplificado para fins de exemplo */}
               <li className="nav-item w-full md:w-auto">
-                <a className="nav-link block py-2 px-4 text-gray-800 hover:text-blue-600 transition-colors duration-200" href="index.html">Início</a>
+                <a className="nav-link block py-2 px-4 text-gray-800 hover:text-blue-600 transition-colors duration-200" href="#">Início</a>
               </li>
               <li className="nav-item w-full md:w-auto">
-                <a className="nav-link block py-2 px-4 text-gray-800 hover:text-blue-600 transition-colors duration-200" href="projeto.html">O Projeto</a>
+                <a className="nav-link block py-2 px-4 text-gray-800 hover:text-blue-600 transition-colors duration-200" href="#">O Projeto</a>
               </li>
               <li className="nav-item w-full md:w-auto">
-                <a className="nav-link block py-2 px-4 text-gray-800 hover:text-blue-600 transition-colors duration-200" href="referencial.html">Referencial</a>
+                <a className="nav-link block py-2 px-4 text-gray-800 hover:text-blue-600 transition-colors duration-200" href="#">Resultados</a>
               </li>
               <li className="nav-item w-full md:w-auto">
-                <a className="nav-link block py-2 px-4 text-gray-800 hover:text-blue-600 transition-colors duration-200" href="resultados.html">Resultados</a>
-              </li>
-              <li className="nav-item w-full md:w-auto">
-                <a className="nav-link block py-2 px-4 text-gray-800 hover:text-blue-600 transition-colors duration-200" href="publicacoes.html">Publicações</a>
-              </li>
-              <li className="nav-item w-full md:w-auto">
-                <a className="nav-link block py-2 px-4 text-gray-800 hover:text-blue-600 transition-colors duration-200" href="dados.html">Dados</a>
-              </li>
-              <li className="nav-item w-full md:w-auto">
-                <a className="nav-link block py-2 px-4 font-bold text-blue-600 border-b-2 border-blue-600" aria-current="page" href="glossario.html">Glossário</a>
-              </li>
-              <li className="nav-item w-full md:w-auto">
-                <a className="nav-link block py-2 px-4 text-gray-800 hover:text-blue-600 transition-colors duration-200" href="sobre.html">Sobre</a>
-              </li>
-              <li className="nav-item w-full md:w-auto">
-                <a className="nav-link block py-2 px-4 text-gray-800 hover:text-blue-600 transition-colors duration-200" href="contato.html">Contato</a>
+                <a className="nav-link block py-2 px-4 font-bold text-blue-600 border-b-2 border-blue-600" aria-current="page" href="#">Glossário</a>
               </li>
             </ul>
           </div>
@@ -131,35 +131,43 @@ const App = () => {
       </header>
 
       {/* Conteúdo principal da página */}
-      <main className="page-content py-12">
-        <div className="container mx-auto px-4">
-          <h1 className="text-4xl lg:text-5xl font-[Playfair+Display] font-bold text-gray-900 text-center mb-2">Glossário de Termos-Chave</h1>
+      <main className="page-content py-12 px-4">
+        <div className="container mx-auto max-w-4xl">
+          <h1 className="text-4xl lg:text-5xl font-extrabold text-gray-900 text-center mb-2">Glossário de Termos-Chave</h1>
           <p className="subtitle text-center text-gray-600 mb-8">Desvendando a ciência por trás das nossas pesquisas.</p>
 
           {/* Seção de introdução do glossário */}
-          <section className="content-section bg-white p-6 rounded-lg shadow-md mb-8">
+          <section className="content-section bg-white p-6 rounded-2xl shadow-lg mb-8">
             <p className="text-gray-700 leading-relaxed mb-4">Nesta seção, você encontrará uma lista de termos técnicos, siglas e conceitos relacionados às nossas pesquisas. Este glossário foi criado para facilitar a compreensão e aprofundar o seu conhecimento sobre os temas ambientais e biológicos abordados pela LABIC.</p>
             <p className="text-gray-700 leading-relaxed">Utilize a navegação abaixo para encontrar rapidamente o que procura.</p>
           </section>
 
           {/* Navegação por letras do glossário */}
-          <nav className="glossary-nav flex justify-center space-x-4 mb-8" aria-label="Navegação do Glossário por letras">
+          <nav className="glossary-nav flex justify-center flex-wrap space-x-2 sm:space-x-4 mb-8" aria-label="Navegação do Glossário por letras">
             {Object.keys(glossaryTerms).map((letter) => (
-              <a key={letter} href={`#${letter}`} className="text-lg font-medium text-blue-600 hover:text-blue-800 transition-colors duration-200">
+              <a 
+                key={letter} 
+                href={`#${letter}`} 
+                onClick={(e) => {
+                  e.preventDefault();
+                  handleScrollToSection(letter);
+                }}
+                className="text-lg font-bold text-blue-600 hover:text-blue-800 hover:scale-110 transition-transform duration-200 p-2"
+              >
                 {letter}
               </a>
             ))}
           </nav>
 
           {/* Lista de termos do glossário */}
-          <section className="content-section glossary-list-container bg-white p-6 rounded-lg shadow-md">
+          <section className="content-section glossary-list-container bg-white p-6 rounded-2xl shadow-lg">
             {Object.keys(glossaryTerms).map((letter) => (
-              <div key={letter} className="glossary-group mb-8" id={letter}>
-                <h2 className="text-3xl font-[Playfair+Display] font-bold text-gray-900 mb-4">{letter}</h2>
-                <dl className="glossary-list space-y-6">
+              <div key={letter} className="glossary-group mb-12">
+                <h2 id={letter} className="text-3xl font-extrabold text-gray-900 border-b-2 border-gray-300 pb-2 mb-6">{letter}</h2>
+                <dl className="glossary-list space-y-8">
                   {glossaryTerms[letter].map((term) => (
-                    <div key={term.id}>
-                      <dt id={term.id} className="text-xl font-semibold text-gray-800">{term.term}</dt>
+                    <div key={term.id} className="bg-gray-100 p-4 rounded-lg shadow-sm">
+                      <dt id={term.id} className="text-xl font-bold text-blue-800 mb-2">{term.term}</dt>
                       <dd className="mt-1 text-gray-700 leading-relaxed">{term.definition}</dd>
                     </div>
                   ))}
@@ -171,11 +179,11 @@ const App = () => {
       </main>
 
       {/* Rodapé do site */}
-      <footer className="site-footer bg-gray-900 text-gray-300 py-6">
+      <footer className="site-footer bg-gray-900 text-gray-300 py-8 mt-12 rounded-t-2xl">
         <div className="container mx-auto px-4 flex flex-col md:flex-row items-center justify-between text-center md:text-left">
           <div className="footer-info mb-4 md:mb-0">
-            <p>&copy; 2025 - LABIC | Liga Acadêmica de Biologia.</p>
-            <p className="mt-1">Orientação: Professor Vanbasten Rocha</p>
+            <p className="text-sm">&copy; 2025 - LABIC | Liga Acadêmica de Biologia.</p>
+            <p className="text-sm mt-1">Orientação: Professor Vanbasten Rocha</p>
           </div>
           <div className="footer-social-links">
             <a
@@ -187,7 +195,7 @@ const App = () => {
               <img
                 src="https://placehold.co/40x40/E8E8E8/404040?text=IG"
                 alt="Ícone do Instagram"
-                className="h-10 w-10 transition-transform duration-300 hover:scale-110"
+                className="h-10 w-10 rounded-full transition-transform duration-300 hover:scale-110"
               />
             </a>
           </div>
@@ -197,4 +205,5 @@ const App = () => {
   );
 };
 
-export default App;
+export default GlossaryPage;
+

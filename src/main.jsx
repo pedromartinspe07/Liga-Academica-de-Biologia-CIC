@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom/client';
 // Importa o componente principal da sua aplicação.
 import App from './App'; 
 // Importa o arquivo de estilos global do Tailwind CSS.
-import './index.css'; 
+import './output.css'; 
 
 // Cria a raiz do React no elemento HTML com id="root".
 ReactDOM.createRoot(document.getElementById('root')).render(
