@@ -12,7 +12,7 @@ import ProjectPage from './components/ProjectPage';
 import DadosPage from './components/DadosPage';
 import GlossaryPage from './components/GlossaryPage';
 import PublicacoesPage from './components/PublicacoesPage';
-import ResultadosPage from './components/ResultadosPage';
+import ResultadosPage from './components/ResultsPage';
 import ContactPage from './components/ContactPage';
 import Footer from './components/Footer'; // Agora, o Footer é um componente separado.
 

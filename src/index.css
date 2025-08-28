@@ -1,7 +1,5 @@
 /* src/index.css */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 /* 1. Importação de Fontes e Configuração de Variáveis (customizadas) */
 /* As fontes são importadas no CSS. As cores e espaçamentos serão usados
